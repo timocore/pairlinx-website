@@ -1,16 +1,28 @@
 import { PRODUCT_HERO_PC, PRODUCT_HERO_PHONE } from "../../config/product-hero";
 
-/** Compact screenshot preview for homepage featured block (smaller than product page hero). */
-export function FeaturedProductPreview() {
-  return (
-    <div className="relative mx-auto w-full max-w-[300px]">
-      <div
-        className="pointer-events-none absolute -inset-4 rounded-2xl bg-gradient-to-br from-blue-600/15 via-purple-600/10 to-cyan-600/10 blur-2xl"
-        aria-hidden
-      />
+type FeaturedProductPreviewProps = {
+  embedded?: boolean;
+};
 
-      <div className="relative">
-        <div className="overflow-hidden rounded-lg border border-slate-200/25 bg-white shadow-xl shadow-black/45 ring-1 ring-white/10">
+/** Compact screenshot preview for homepage featured block (smaller than product page hero). */
+export function FeaturedProductPreview({ embedded = false }: FeaturedProductPreviewProps) {
+  return (
+    <div className="relative mx-auto w-full min-w-0 max-w-[340px] sm:max-w-[360px]">
+      {!embedded ? (
+        <div
+          className="pointer-events-none absolute -inset-5 rounded-2xl bg-gradient-to-br from-blue-600/15 via-purple-600/10 to-cyan-600/10 blur-2xl"
+          aria-hidden
+        />
+      ) : null}
+
+      <div
+        className={`relative pb-3 ${
+          embedded
+            ? "rounded-xl border border-white/[0.08] bg-gray-950/20 p-3 ring-1 ring-inset ring-white/[0.05] shadow-inner"
+            : "rounded-xl p-1 ring-1 ring-white/10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)]"
+        }`}
+      >
+        <div className="overflow-hidden rounded-lg border border-slate-200/30 bg-white shadow-xl shadow-black/45 ring-1 ring-white/15">
           <img
             src={PRODUCT_HERO_PC}
             alt="QuickShotTransfer Windows inbox with recent image transfers"
@@ -20,13 +32,13 @@ export function FeaturedProductPreview() {
           />
         </div>
 
-        <div className="absolute right-0 bottom-0 z-10 w-[34%] min-w-[3.5rem] max-w-[5.5rem] translate-x-1/2 translate-y-1/4">
-          <div className="rounded-[1.35rem] bg-slate-900 p-1 shadow-lg shadow-black/50 ring-1 ring-white/10">
+        <div className="absolute right-3 bottom-5 z-10 w-[24%] min-w-[2.5rem] max-w-[3.75rem] translate-x-[30%]">
+          <div className="relative rounded-[1.2rem] bg-slate-900 p-[3px] shadow-xl shadow-black/55 ring-1 ring-white/15">
             <div
-              className="absolute top-1.5 left-1/2 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-black"
+              className="absolute top-1 left-1/2 z-20 h-1 w-4 -translate-x-1/2 rounded-full bg-black"
               aria-hidden
             />
-            <div className="overflow-hidden rounded-[1.1rem] bg-black">
+            <div className="overflow-hidden rounded-[0.95rem] bg-black ring-1 ring-white/5">
               <img
                 src={PRODUCT_HERO_PHONE}
                 alt="QuickShotTransfer iPhone browser upload page"
@@ -39,7 +51,7 @@ export function FeaturedProductPreview() {
         </div>
       </div>
 
-      <p className="mt-5 text-center text-xs leading-relaxed text-gray-500">
+      <p className="mt-4 text-center text-xs leading-relaxed text-gray-500">
         iPhone browser → QuickShot Cloud → saved locally on Windows
       </p>
     </div>

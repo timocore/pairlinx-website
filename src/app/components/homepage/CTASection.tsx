@@ -5,7 +5,7 @@ import { PRODUCT_NAME } from "../../config";
 
 export function CTASection() {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28">
+    <section className="relative overflow-hidden py-12 sm:py-14">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(99,102,241,0.35),transparent)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_100%_100%,rgba(147,51,234,0.25),transparent)]" />
@@ -19,18 +19,18 @@ export function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm font-semibold tracking-wide uppercase text-blue-200/90 mb-5">
+          <p className="text-sm font-semibold tracking-wide uppercase text-blue-200/90 mb-4">
             Get started
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
             Start with {PRODUCT_NAME}.
           </h2>
-          <p className="text-lg text-blue-100/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-blue-100/80 mb-6 max-w-2xl mx-auto leading-relaxed">
             Download for Windows, sign in once, and send images from your iPhone browser to your
             desktop inbox.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link
                 to="/download"

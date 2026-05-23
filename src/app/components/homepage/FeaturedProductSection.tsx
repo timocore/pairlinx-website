@@ -5,7 +5,7 @@ import { PRODUCT_NAME } from "../../config";
 import { FeaturedProductPreview } from "./FeaturedProductPreview";
 
 const highlights = [
-  "Browser-based phone upload (QR code, sign-in required)",
+  "Browser-based phone upload",
   "No iPhone app required",
   "Recent image inbox on Windows",
   "Copy, preview, and open folder",
@@ -17,7 +17,7 @@ const sectionBadgeClass =
 
 export function FeaturedProductSection() {
   return (
-    <section id="featured-product" className="relative overflow-hidden py-20 sm:py-28">
+    <section id="featured-product" className="relative overflow-hidden py-14 sm:py-20">
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[400px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-blue-600/15 via-purple-600/15 to-pink-600/15 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6">
@@ -26,7 +26,7 @@ export function FeaturedProductSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mx-auto mb-12 max-w-2xl text-center"
+          className="mx-auto mb-10 max-w-2xl text-center"
         >
           <div className={`${sectionBadgeClass} mb-4 border-blue-500/30 bg-blue-500/20 text-blue-300`}>
             Featured product
@@ -41,9 +41,9 @@ export function FeaturedProductSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto max-w-5xl rounded-3xl border border-blue-500/30 bg-gradient-to-br from-gray-800/80 via-gray-900/90 to-gray-800/80 p-8 shadow-2xl shadow-blue-600/10 backdrop-blur-sm sm:p-12"
+          className="mx-auto max-w-5xl rounded-3xl border border-blue-500/25 bg-gradient-to-br from-gray-800/80 via-gray-900/90 to-gray-800/80 p-7 shadow-xl shadow-blue-950/20 backdrop-blur-sm sm:p-10"
         >
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
             <div>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-500/25 bg-green-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-300">
                 Available now
@@ -59,7 +59,7 @@ export function FeaturedProductSection() {
                 Image-only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF.
               </p>
 
-              <ul className="mb-10 space-y-3">
+              <ul className="mb-8 space-y-2.5">
                 {highlights.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-gray-300">
                     <Check className="mt-0.5 size-5 shrink-0 text-green-400" />
@@ -86,8 +86,18 @@ export function FeaturedProductSection() {
               </div>
             </div>
 
-            <div className="flex justify-center lg:justify-end">
-              <FeaturedProductPreview />
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[400px] overflow-visible rounded-2xl border border-white/[0.07] bg-gradient-to-b from-white/[0.05] via-gray-900/20 to-gray-900/40 p-5 sm:p-6">
+                <div
+                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(59,130,246,0.14),transparent_68%)]"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute inset-x-4 top-4 h-24 rounded-full bg-blue-400/[0.06] blur-2xl"
+                  aria-hidden
+                />
+                <FeaturedProductPreview embedded />
+              </div>
             </div>
           </div>
         </motion.div>

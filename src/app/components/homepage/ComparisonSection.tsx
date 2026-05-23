@@ -82,7 +82,7 @@ export function ComparisonSection() {
                 <h3 className="text-2xl font-bold">QuickShotTransfer</h3>
               </div>
 
-              <p className="text-xl mb-8 text-white/90 max-w-2xl">
+              <p className="mb-8 text-base text-white/90 sm:text-lg lg:text-xl">
                 Built for fast iPhone-to-PC image handoff — browser upload, sign-in required, Free and Pro plans.
               </p>
 

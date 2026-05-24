@@ -15,7 +15,7 @@ export function Logo() {
           </svg>
         </div>
       </div>
-      <span className="text-[17px] font-bold text-slate-900 tracking-tight">
+      <span className="text-[17px] font-bold tracking-tight text-white group-hover:text-gray-50 transition-colors">
         {BRAND_NAME}
       </span>
     </Link>

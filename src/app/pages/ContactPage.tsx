@@ -49,7 +49,9 @@ function isValidEmail(value: string): boolean {
 export function ContactPage() {
   const [values, setValues] = useState<FormValues>(INITIAL_VALUES);
   const [errors, setErrors] = useState<FormErrors>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "loading" | "success" | "error">(
+    "idle",
+  );
   const [showProductDetails, setShowProductDetails] = useState(false);
 
   const hasErrors = useMemo(() => Object.keys(errors).length > 0, [errors]);
@@ -91,28 +93,41 @@ export function ContactPage() {
     }
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const nextErrors = validate(values);
     setErrors(nextErrors);
-    setSubmitted(false);
+    setSubmitStatus("idle");
 
     if (Object.keys(nextErrors).length > 0) {
       return;
     }
 
-    // TODO(spam): Include honeypot validation in /api/contact when backend is added.
     if (values.website.trim()) {
+      setSubmitStatus("success");
       return;
     }
 
-    // TODO(contact-api): Wire this form to /api/contact with Resend.
-    setSubmitted(true);
-    setValues((prev) => ({
-      ...INITIAL_VALUES,
-      website: prev.website,
-    }));
-    setShowProductDetails(false);
+    setSubmitStatus("loading");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      setSubmitStatus("success");
+      setValues(INITIAL_VALUES);
+      setShowProductDetails(false);
+    } catch {
+      setSubmitStatus("error");
+    }
   }
 
   const inputClass =
@@ -288,22 +303,21 @@ export function ContactPage() {
 
               <button
                 type="submit"
+                disabled={submitStatus === "loading"}
                 className="inline-flex h-11 items-center justify-center rounded-xl bg-gradient-to-r from-blue-700 to-cyan-600 px-6 text-base font-semibold text-white shadow-lg shadow-blue-600/30 transition hover:opacity-95"
               >
-                Send message
+                {submitStatus === "loading" ? "Sending..." : "Send message"}
               </button>
 
-              {submitted ? (
+              {submitStatus === "success" ? (
                 <div className="rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-200">
-                  Thanks — contact form delivery will be connected soon. For now, email us directly
-                  at{" "}
-                  <a
-                    href={`mailto:${SUPPORT_EMAIL}`}
-                    className="font-semibold text-green-100 underline decoration-green-200/50 underline-offset-2"
-                  >
-                    {SUPPORT_EMAIL}
-                  </a>
-                  .
+                  Your message was sent successfully.
+                </div>
+              ) : null}
+
+              {submitStatus === "error" ? (
+                <div className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+                  Something went wrong. Please try again or email {SUPPORT_EMAIL}.
                 </div>
               ) : null}
 

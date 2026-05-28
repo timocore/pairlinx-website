@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router";
 import { useEffect } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { SeoMeta } from "./SeoMeta";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -25,6 +26,7 @@ export function RootLayout() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <ScrollToTop />
+      <SeoMeta />
       <Header />
       <main className="flex-1">
         <Outlet />

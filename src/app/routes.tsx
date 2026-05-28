@@ -10,6 +10,7 @@ import { ContactPage } from "./pages/ContactPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
 import { RefundPolicyPage } from "./pages/RefundPolicyPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
       { path: "privacy", element: <PrivacyPage /> },
       { path: "terms", element: <TermsPage /> },
       { path: "refund-policy", element: <RefundPolicyPage /> },
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
 ]);

@@ -6,6 +6,7 @@ import { ProductPage } from "./pages/ProductPage";
 import { PricingPage } from "./pages/PricingPage";
 import { DownloadPage } from "./pages/DownloadPage";
 import { SupportPage } from "./pages/SupportPage";
+import { ContactPage } from "./pages/ContactPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
 import { RefundPolicyPage } from "./pages/RefundPolicyPage";
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
       { path: "pricing", element: <PricingPage /> },
       { path: "download", element: <DownloadPage /> },
       { path: "support", element: <SupportPage /> },
+      { path: "contact", element: <ContactPage /> },
       { path: "privacy", element: <PrivacyPage /> },
       { path: "terms", element: <TermsPage /> },
       { path: "refund-policy", element: <RefundPolicyPage /> },

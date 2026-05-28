@@ -397,13 +397,21 @@ export function SupportPage() {
               Email us with your account email, Windows app version if known, what you tried, and
               any error message you saw.
             </p>
-            <a
-              href={`mailto:${SUPPORT_EMAIL}`}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-700 to-cyan-600 px-6 py-3 text-base font-bold text-white shadow-lg shadow-blue-600/30 transition-opacity hover:opacity-95"
-            >
-              <Mail className="h-5 w-5" aria-hidden />
-              {SUPPORT_EMAIL}
-            </a>
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a
+                href={`mailto:${SUPPORT_EMAIL}`}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-700 to-cyan-600 px-6 py-3 text-base font-bold text-white shadow-lg shadow-blue-600/30 transition-opacity hover:opacity-95"
+              >
+                <Mail className="h-5 w-5" aria-hidden />
+                {SUPPORT_EMAIL}
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-xl border border-gray-600 bg-gray-900/40 px-5 py-3 text-sm font-semibold text-gray-100 transition-colors hover:border-gray-500 hover:bg-gray-800/60"
+              >
+                Open contact form
+              </Link>
+            </div>
             <p className="mt-5 text-sm text-gray-500">
               <Link to="/privacy" className="text-blue-400 hover:text-blue-300">
                 Privacy

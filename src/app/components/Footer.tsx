@@ -1,11 +1,23 @@
 import { Link } from "react-router";
+import { Github, Linkedin, Youtube } from "lucide-react";
 import { Logo } from "./Logo";
-import { BRAND_NAME, SUPPORT_EMAIL } from "../config";
+import { BRAND_NAME, SOCIAL_LINKS, SUPPORT_EMAIL, type SocialLabel } from "../config";
 
 const footerLinkClass =
   "text-[15px] text-gray-400 transition-colors duration-200 hover:text-gray-100";
 
+const socialIconClass = "h-4 w-4";
+
+function SocialIcon({ label }: { label: SocialLabel }) {
+  if (label === "LinkedIn") return <Linkedin className={socialIconClass} />;
+  if (label === "YouTube") return <Youtube className={socialIconClass} />;
+  if (label === "GitHub") return <Github className={socialIconClass} />;
+  return <span className="text-xs leading-none font-bold">X</span>;
+}
+
 export function Footer() {
+  const activeSocialLinks = SOCIAL_LINKS.filter((link) => link.href.trim().length > 0);
+
   return (
     <footer className="border-t border-gray-800/60 bg-black/40 backdrop-blur-sm text-white">
       <div className="mx-auto max-w-7xl px-6 pb-16 pt-18 lg:px-8">
@@ -15,6 +27,23 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-[15px] leading-relaxed text-gray-300">
               Simple utilities for faster phone-to-computer workflows.
             </p>
+            {activeSocialLinks.length > 0 ? (
+              <ul className="mt-5 flex items-center gap-2.5">
+                {activeSocialLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      aria-label={link.label}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-gray-700 bg-gray-900/40 text-gray-300 transition-colors hover:border-gray-600 hover:text-gray-100"
+                    >
+                      <SocialIcon label={link.label} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
           <div>
             <h3 className="mb-4 text-sm font-semibold text-gray-100">Product</h3>

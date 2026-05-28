@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router";
-import { ChevronDown, Mail } from "lucide-react";
-import { SUPPORT_EMAIL } from "../config";
+import { ChevronDown, Github, Linkedin, Mail, Youtube } from "lucide-react";
+import { SOCIAL_LINKS, SUPPORT_EMAIL, type SocialLabel } from "../config";
 
 type ContactCategory =
   | "Support"
@@ -42,6 +42,15 @@ const CATEGORY_OPTIONS: ContactCategory[] = [
   "General question",
 ];
 
+const socialIconClass = "h-4 w-4";
+
+function SocialIcon({ label }: { label: SocialLabel }) {
+  if (label === "LinkedIn") return <Linkedin className={socialIconClass} />;
+  if (label === "YouTube") return <Youtube className={socialIconClass} />;
+  if (label === "GitHub") return <Github className={socialIconClass} />;
+  return <span className="text-xs leading-none font-bold">X</span>;
+}
+
 function isValidEmail(value: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
@@ -55,6 +64,10 @@ export function ContactPage() {
   const [showProductDetails, setShowProductDetails] = useState(false);
 
   const hasErrors = useMemo(() => Object.keys(errors).length > 0, [errors]);
+  const activeSocialLinks = useMemo(
+    () => SOCIAL_LINKS.filter((link) => link.href.trim().length > 0),
+    [],
+  );
 
   function validate(nextValues: FormValues): FormErrors {
     const nextErrors: FormErrors = {};
@@ -356,6 +369,29 @@ export function ContactPage() {
                 {SUPPORT_EMAIL}
               </a>
             </div>
+
+            {activeSocialLinks.length > 0 ? (
+              <div className="mb-6">
+                <p className="mb-2 text-xs font-semibold tracking-wide text-gray-400 uppercase">
+                  Follow
+                </p>
+                <ul className="flex items-center gap-2.5">
+                  {activeSocialLinks.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        aria-label={link.label}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-700 bg-gray-900/40 text-gray-300 transition-colors hover:border-gray-600 hover:text-gray-100"
+                      >
+                        <SocialIcon label={link.label} />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
 
             <p className="mb-5 text-sm text-gray-400">We usually reply as soon as possible.</p>
 

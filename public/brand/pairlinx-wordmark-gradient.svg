@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 120" fill="none" role="img" aria-labelledby="pairlinxGradientWordmarkTitle">
+  <title id="pairlinxGradientWordmarkTitle">Pairlinx gradient wordmark</title>
+  <defs>
+    <linearGradient id="pairlinxGradient" x1="0" y1="0" x2="620" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#28D7FF" />
+      <stop offset="52%" stop-color="#2E7BFF" />
+      <stop offset="100%" stop-color="#8B5CFF" />
+    </linearGradient>
+  </defs>
+  <text
+    x="0"
+    y="88"
+    fill="url(#pairlinxGradient)"
+    font-family="Satoshi, General Sans, Plus Jakarta Sans, Manrope, SF Pro Rounded, Outfit, Inter, Segoe UI, Arial, sans-serif"
+    font-size="88"
+    font-weight="800"
+    letter-spacing="-0.02em"
+  >
+    Pairlin
+  </text>
+  <g transform="translate(438 24)">
+    <path d="M0 10H24L44 36L23 62H0L21 36L0 10Z" fill="url(#pairlinxGradient)" />
+    <path d="M50 10H74L53 36L74 62H50L30 36L50 10Z" fill="url(#pairlinxGradient)" />
+  </g>
+</svg>

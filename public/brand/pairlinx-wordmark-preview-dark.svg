@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 512" fill="none" role="img" aria-labelledby="pairlinxDarkPreviewTitle">
+  <title id="pairlinxDarkPreviewTitle">Pairlinx wordmark dark preview</title>
+  <rect width="1280" height="512" fill="#0B1220" />
+  <g transform="translate(190 120)">
+    <text
+      x="0"
+      y="210"
+      fill="#FFFFFF"
+      font-family="Satoshi, General Sans, Plus Jakarta Sans, Manrope, SF Pro Rounded, Outfit, Inter, Segoe UI, Arial, sans-serif"
+      font-size="220"
+      font-weight="800"
+      letter-spacing="-0.02em"
+    >
+      Pairlin
+    </text>
+    <g transform="translate(1092 56)">
+      <path d="M0 22H60L110 82L58 142H0L52 82L0 22Z" fill="#FFFFFF" />
+      <path d="M126 22H186L134 82L186 142H126L76 82L126 22Z" fill="#FFFFFF" />
+    </g>
+  </g>
+</svg>

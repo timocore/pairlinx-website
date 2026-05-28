@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="pairlinxCompactTitle">
+  <title id="pairlinxCompactTitle">Pairlinx compact wordmark</title>
+  <rect width="128" height="128" rx="24" fill="#0B1220" />
+  <defs>
+    <linearGradient id="compactGradient" x1="18" y1="14" x2="110" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#28D7FF" />
+      <stop offset="52%" stop-color="#2E7BFF" />
+      <stop offset="100%" stop-color="#8B5CFF" />
+    </linearGradient>
+  </defs>
+  <text
+    x="18"
+    y="86"
+    fill="url(#compactGradient)"
+    font-family="Satoshi, General Sans, Plus Jakarta Sans, Manrope, SF Pro Rounded, Outfit, Inter, Segoe UI, Arial, sans-serif"
+    font-size="74"
+    font-weight="800"
+    letter-spacing="-0.02em"
+  >
+    P
+  </text>
+  <g transform="translate(66 42)">
+    <path d="M0 8H16L29 24L15 40H0L13 24L0 8Z" fill="url(#compactGradient)" />
+    <path d="M34 8H50L36 24L50 40H34L21 24L34 8Z" fill="url(#compactGradient)" />
+  </g>
+</svg>

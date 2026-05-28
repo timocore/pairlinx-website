@@ -9,9 +9,9 @@ type SeoEntry = {
 
 const SEO_BY_PATH: Record<string, SeoEntry> = {
   "/": {
-    title: "PlatformBrand — Simple utilities for phone and computer workflows",
+    title: "Pairlinx — Simple utilities for phone and computer workflows",
     description:
-      "PlatformBrand builds focused cross-device utilities that make phone-to-computer workflows faster. Start with QuickShotTransfer for iPhone-to-PC image handoff.",
+      "Pairlinx builds focused cross-device utilities that make phone-to-computer workflows faster. Start with QuickShotTransfer for iPhone-to-PC image handoff.",
   },
   "/products/quickshottransfer": {
     title: "QuickShotTransfer — Send images from iPhone to PC in seconds",
@@ -34,29 +34,29 @@ const SEO_BY_PATH: Record<string, SeoEntry> = {
       "Get help with QuickShotTransfer installation, QR pairing, image uploads, billing, privacy requests, and troubleshooting.",
   },
   "/contact": {
-    title: "Contact PlatformBrand",
+    title: "Contact Pairlinx",
     description:
-      "Contact PlatformBrand for QuickShotTransfer support, billing questions, privacy requests, partnerships, and general questions.",
+      "Contact Pairlinx for QuickShotTransfer support, billing questions, privacy requests, partnerships, and general questions.",
   },
   "/privacy": {
-    title: "Privacy Policy — PlatformBrand",
+    title: "Privacy Policy — Pairlinx",
     description:
-      "Learn how PlatformBrand and QuickShotTransfer handle account information, uploaded images, usage data, billing status, and support requests.",
+      "Learn how Pairlinx and QuickShotTransfer handle account information, uploaded images, usage data, billing status, and support requests.",
   },
   "/terms": {
-    title: "Terms of Service — PlatformBrand",
+    title: "Terms of Service — Pairlinx",
     description:
-      "Review the terms that govern your use of QuickShotTransfer and PlatformBrand services.",
+      "Review the terms that govern your use of QuickShotTransfer and Pairlinx services.",
   },
   "/refund-policy": {
-    title: "Refund Policy — PlatformBrand",
+    title: "Refund Policy — Pairlinx",
     description:
       "Learn how refunds, cancellations, and billing support work for QuickShotTransfer Pro subscriptions.",
   },
 };
 
 const NOT_FOUND_SEO: SeoEntry = {
-  title: "Page not found — PlatformBrand",
+  title: "Page not found — Pairlinx",
   description: "The page you are looking for may have moved or the link may be incorrect.",
 };
 

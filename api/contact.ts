@@ -134,7 +134,7 @@ function validatePayload(raw: Record<string, unknown>): {
 
 function internalEmailText(payload: ContactPayload): string {
   const lines = [
-    "New PlatformBrand contact request",
+    "New Pairlinx contact request",
     "",
     `Category: ${payload.category.toUpperCase()}`,
     `Name: ${payload.name}`,
@@ -159,13 +159,13 @@ function confirmationEmailText(name: string): string {
   return [
     `Hi ${name},`,
     "",
-    "We received your message — PlatformBrand.",
+    "We received your message — Pairlinx.",
     "",
     "Thanks for reaching out about QuickShotTransfer. Our support team will review your note and follow up as soon as possible.",
     "",
     "If you need to add more context, reply to this email with any additional details.",
     "",
-    "PlatformBrand Support",
+    "Pairlinx Support",
   ].join("\n");
 }
 
@@ -199,7 +199,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
   // TODO(spam): Add additional anti-abuse checks (IP reputation / per-email throttle).
 
   const resendApiKey = process.env.RESEND_API_KEY;
-  const contactToEmail = process.env.CONTACT_TO_EMAIL || "support@platformbrand.com";
+  const contactToEmail = process.env.CONTACT_TO_EMAIL || "support@pairlinx.com";
   const fromEmail = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
 
   if (!resendApiKey) {
@@ -212,7 +212,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
 
   try {
     await resend.emails.send({
-      from: `PlatformBrand Contact <${fromEmail}>`,
+      from: `Pairlinx Contact <${fromEmail}>`,
       to: [contactToEmail],
       replyTo: payload.email,
       subject: `[${payload.category}] ${payload.subject}`,
@@ -220,9 +220,9 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
     });
 
     await resend.emails.send({
-      from: `PlatformBrand Support <${fromEmail}>`,
+      from: `Pairlinx Support <${fromEmail}>`,
       to: [payload.email],
-      subject: "We received your message — PlatformBrand",
+      subject: "We received your message — Pairlinx",
       text: confirmationEmailText(payload.name),
     });
 

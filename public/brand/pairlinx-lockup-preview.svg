@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 220" fill="none" role="img" aria-labelledby="pairlinxLockupTitle">
+  <title id="pairlinxLockupTitle">Pairlinx horizontal lockup preview</title>
+  <rect width="980" height="220" fill="#0B1220" />
+  <g transform="translate(56 44)">
+    <rect x="0" y="0" width="132" height="132" rx="28" fill="#111827" stroke="#374151" />
+    <image href="/brand/pairlinx-logo-icon.png" x="20" y="20" width="92" height="92" preserveAspectRatio="xMidYMid meet" />
+  </g>
+  <g transform="translate(234 42)">
+    <defs>
+      <linearGradient id="lockupGradient" x1="0" y1="0" x2="640" y2="140" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#28D7FF" />
+        <stop offset="52%" stop-color="#2E7BFF" />
+        <stop offset="100%" stop-color="#8B5CFF" />
+      </linearGradient>
+    </defs>
+    <text
+      x="0"
+      y="122"
+      fill="url(#lockupGradient)"
+      font-family="Satoshi, General Sans, Plus Jakarta Sans, Manrope, SF Pro Rounded, Outfit, Inter, Segoe UI, Arial, sans-serif"
+      font-size="128"
+      font-weight="800"
+      letter-spacing="-0.02em"
+    >
+      Pairlin
+    </text>
+    <g transform="translate(638 34)">
+      <path d="M0 14H34L63 49L33 84H0L30 49L0 14Z" fill="url(#lockupGradient)" />
+      <path d="M72 14H106L76 49L106 84H72L43 49L72 14Z" fill="url(#lockupGradient)" />
+    </g>
+  </g>
+</svg>

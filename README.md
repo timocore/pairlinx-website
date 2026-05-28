@@ -1,7 +1,7 @@
 
-  # PlatformBrand / QuickShotTransfer Marketing Website
+  # Pairlinx / QuickShotTransfer Marketing Website
 
-  This is the imported Figma marketing website for PlatformBrand and its first product, QuickShotTransfer.
+  This is the marketing website for Pairlinx and its first product, QuickShotTransfer.
 
   ## Running the code
 

@@ -1,23 +1,26 @@
 import { Link } from "react-router";
-import { BRAND_NAME } from "../config";
 
 export function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-3 group">
+    <Link to="/" aria-label="Pairlinx" className="flex items-center gap-0.5 group">
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl blur-sm opacity-40 group-hover:opacity-60 transition-opacity"></div>
-        <div className="relative h-9 w-9 rounded-xl bg-gradient-to-br from-blue-700 to-cyan-600 flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:shadow-xl group-hover:shadow-blue-600/40 transition-all">
-          <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-            <rect x="4" y="4" width="7" height="7" rx="1.5" stroke="white" strokeWidth="2" fill="white" fillOpacity="0.3"/>
-            <rect x="13" y="4" width="7" height="7" rx="1.5" stroke="white" strokeWidth="2" fill="white" fillOpacity="0.3"/>
-            <rect x="4" y="13" width="7" height="7" rx="1.5" stroke="white" strokeWidth="2" fill="white" fillOpacity="0.3"/>
-            <rect x="13" y="13" width="7" height="7" rx="1.5" stroke="white" strokeWidth="2" fill="white" fillOpacity="0.6"/>
-          </svg>
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/16 to-cyan-500/16 opacity-0 blur-sm transition-opacity group-hover:opacity-70" />
+        <div className="relative flex h-[34px] w-[34px] items-center justify-center rounded-lg border border-gray-700/80 bg-gray-900/80 shadow-sm transition-colors group-hover:border-gray-600 group-hover:bg-gray-800/80">
+          <img
+            src="/brand/pairlinx-logo-icon.png"
+            alt=""
+            aria-hidden="true"
+            className="h-[29px] w-[29px] object-contain"
+          />
         </div>
       </div>
-      <span className="text-[17px] font-bold tracking-tight text-white group-hover:text-gray-50 transition-colors">
-        {BRAND_NAME}
-      </span>
+      <div className="flex h-[34px] items-center">
+        <img
+          src="/brand/pairlinx-wordmark.png"
+          alt="Pairlinx"
+          className="block h-6 w-auto -translate-y-[2px] object-contain transition-opacity group-hover:opacity-95"
+        />
+      </div>
     </Link>
   );
 }

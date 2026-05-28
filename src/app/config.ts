@@ -1,14 +1,27 @@
-export const BRAND_NAME = "PlatformBrand";
+export const BRAND_NAME = "Pairlinx";
 export const PRODUCT_NAME = "QuickShotTransfer";
 
 /** Primary support contact — update this one address for the whole site. */
-export const SUPPORT_EMAIL = "support@platformbrand.com";
+export const SUPPORT_EMAIL = "support@pairlinx.com";
 
-/** TODO(seo): Replace with production domain before launch. */
-export const SITE_URL = "https://example.com";
+export const SITE_URL = "https://pairlinx.com";
 
 /** Placeholder Open Graph image path until final social card is exported. */
-export const DEFAULT_OG_IMAGE = "/og/platformbrand-og.png";
+export const DEFAULT_OG_IMAGE = "/og/pairlinx-og.png";
+
+export type SocialLabel = "X" | "LinkedIn" | "YouTube" | "GitHub";
+
+export type SocialLink = {
+  label: SocialLabel;
+  href: string;
+};
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  { label: "X", href: "" },
+  { label: "LinkedIn", href: "" },
+  { label: "YouTube", href: "" },
+  { label: "GitHub", href: "" },
+];
 
 /** Aliases for legal and privacy inquiries (same inbox for launch). */
 export const PRIVACY_EMAIL = SUPPORT_EMAIL;

@@ -1,4 +1,5 @@
 import {
+  Check,
   ChevronDown,
   CreditCard,
   Download,
@@ -9,8 +10,13 @@ import {
 import { useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import { SUPPORT_EMAIL } from "../config";
-import { SUPPORTED_IMAGE_FORMATS } from "../config/pricing";
 
+type QuickHelpItem = {
+  anchorId: string;
+  title: string;
+  description: ReactNode;
+  icon: typeof Download;
+};
 type FaqItem = { id: string; question: string; answer: ReactNode };
 type FaqSection = {
   id: string;
@@ -19,31 +25,50 @@ type FaqSection = {
   questions: FaqItem[];
 };
 
-const QUICK_HELP = [
+const QUICK_HELP: QuickHelpItem[] = [
   {
-    id: "installation",
+    anchorId: "installation",
     title: "Installation",
     description: "Get the Windows app installed and running.",
     icon: Download,
   },
   {
-    id: "pairing",
+    anchorId: "pairing-uploads",
     title: "Pairing & uploads",
-    description: "Scan the QR code and send images from your iPhone browser.",
+    description: (
+      <>
+        Scan the{" "}
+        <span className="whitespace-nowrap">QR code</span> and send images from your{" "}
+        <span className="whitespace-nowrap">iPhone</span> browser.
+      </>
+    ),
     icon: QrCode,
   },
   {
-    id: "billing",
+    anchorId: "billing",
     title: "Billing",
     description: "Upgrade, cancel, or manage your Pro subscription.",
     icon: CreditCard,
   },
   {
-    id: "privacy",
+    anchorId: "privacy",
     title: "Privacy",
-    description: "Understand image handling or request account/data deletion.",
+    description: (
+      <>
+        Understand image handling or request{" "}
+        <span className="whitespace-nowrap">account/data</span> deletion.
+      </>
+    ),
     icon: Shield,
   },
+];
+
+const TROUBLESHOOTING_ITEMS = [
+  "Keep the QuickShotTransfer Windows app open.",
+  "Confirm you are signed in on the desktop app.",
+  "Refresh the phone upload page.",
+  "Generate a new QR code if the old one expired.",
+  "Check your internet connection and your local save folder.",
 ] as const;
 
 const FAQ_SECTIONS: FaqSection[] = [
@@ -56,30 +81,30 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "install-1",
         question: "How do I install QuickShotTransfer on Windows?",
         answer:
-          "Download the Windows app from the Download page, run the installer, open QuickShotTransfer, and sign in. Keep the desktop app running while you send images from your phone.",
+          "Download the Windows installer, open it, and follow the setup steps. After installation, sign in and keep the desktop app running while you send images from your phone.",
       },
       {
         id: "install-2",
         question: "Where do my transferred images appear?",
         answer:
-          "Images are saved locally to your QuickShotTransfer folder on your Windows PC. You can open the folder from the desktop app using the Open Folder action.",
+          "Images appear in the QuickShotTransfer desktop inbox and are saved locally on your Windows PC. You can copy the latest image, preview it, or open the save folder from the app.",
       },
       {
         id: "install-3",
         question: "Does the app need to stay open?",
         answer:
-          "Yes. Keep the Windows app open while sending images. The desktop app receives the images and saves them locally on your PC.",
+          "Yes. The Windows app needs to be running so it can receive images from your phone and save them locally.",
       },
       {
         id: "install-4",
         question: "What if Windows shows a security warning?",
         answer:
-          "Windows may show a warning for new apps or unsigned installers. Only download QuickShotTransfer from the official website. If you are not sure, contact support before installing.",
+          "Windows may ask you to confirm before opening a new desktop installer. Only continue if you downloaded QuickShotTransfer from this website.",
       },
     ],
   },
   {
-    id: "pairing",
+    id: "pairing-uploads",
     title: "Pairing and upload help",
     subheading:
       "Fix common issues with QR pairing, sending images, and receiving them on your PC.",
@@ -88,48 +113,49 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "pairing-1",
         question: "How do I send images from my iPhone?",
         answer:
-          "Open QuickShotTransfer on your Windows PC, sign in, open the upload page or QR code, scan it with your iPhone camera, choose images from your browser, and tap Send Images to PC.",
+          "Open QuickShotTransfer on Windows, scan the QR code with your iPhone camera, choose images in your browser, and send them to your paired PC.",
       },
       {
         id: "pairing-2",
         question: "Do I need an iPhone app?",
         answer:
-          "No. The current version uses your iPhone browser. You scan the QR code and upload images from the phone page.",
+          "No. QuickShotTransfer uses your iPhone browser, so there is no separate iPhone app to install.",
       },
       {
         id: "pairing-3",
         question: "My QR code expired. What should I do?",
         answer:
-          "Open QuickShotTransfer on your PC and generate or reopen the upload link again. Then scan the new QR code with your iPhone.",
+          "Open the Windows app and generate or refresh the QR code, then scan it again from your iPhone.",
       },
       {
         id: "pairing-4",
         question: "Images are not appearing on my PC. What should I check?",
         answer:
-          "Make sure the Windows app is open, you are signed in, your PC is connected to the internet, and your phone upload page is paired to the same desktop session. Then refresh the desktop app or generate a new QR code and try again.",
+          "Make sure the Windows app is open, you are signed in, your phone upload page is still paired, your internet connection is working, and the image is a supported format and size.",
       },
       {
         id: "pairing-5",
         question: "My file is too large. What does that mean?",
         answer:
-          "Free supports images up to 5 MB each. Pro supports images up to 50 MB each. If an image is too large, choose a smaller image or upgrade to Pro for higher file-size limits.",
+          "Free supports images up to 5 MB each. Pro supports images up to 50 MB each. Larger files need to be compressed or resized before sending.",
       },
       {
         id: "pairing-6",
         question: "My file format is not supported. What can I send?",
-        answer: `QuickShotTransfer currently supports image uploads only: ${SUPPORTED_IMAGE_FORMATS}. PDFs, ZIP files, documents, and videos are not supported in the current version.`,
+        answer:
+          "QuickShotTransfer supports image files only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF.",
       },
       {
         id: "pairing-7",
         question: "What happens if my PC is asleep or offline?",
         answer:
-          "If your PC is asleep, offline, or the desktop app is closed, images may not appear until the app reconnects. Keep the Windows app open and your PC connected while sending.",
+          "Keep your PC awake and the desktop app running while sending images. If your PC is offline or the app is closed, images may not appear until you reconnect and try again.",
       },
       {
         id: "pairing-8",
         question: "Can I send multiple images at once?",
         answer:
-          "Yes. You can select multiple images from the phone upload page and send them to your paired Windows PC.",
+          "Yes. You can select multiple supported images from your iPhone browser and send them together, as long as they fit your plan limits.",
       },
     ],
   },
@@ -143,12 +169,11 @@ const FAQ_SECTIONS: FaqSection[] = [
         question: "How do I upgrade to Pro?",
         answer: (
           <>
-            Go to the{" "}
+            Choose Pro from the{" "}
             <Link to="/pricing" className="font-medium text-blue-400 hover:text-blue-300">
-              Pricing page
+              pricing page
             </Link>{" "}
-            or use the upgrade prompt inside QuickShotTransfer. Choose monthly or yearly Pro and
-            complete checkout.
+            or inside the desktop app. Pro gives you higher monthly usage and larger image uploads.
           </>
         ),
       },
@@ -156,30 +181,30 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "billing-2",
         question: "I reached my Free monthly limit. What can I do?",
         answer:
-          "You can wait until your monthly allowance resets or upgrade to Pro for higher limits.",
+          "You can wait until your monthly allowance resets or upgrade to Pro for higher monthly usage.",
       },
       {
         id: "billing-3",
         question: "How do I manage or cancel Pro?",
         answer:
-          "You can manage or cancel your Pro subscription through the billing portal. If you need help, contact support using the email below.",
+          "You can manage or cancel your subscription from your account or billing area. Your Pro access continues according to the billing terms shown during checkout.",
       },
       {
         id: "billing-4",
         question: "Who processes payments?",
         answer:
-          "Payments are processed by Stripe. QuickShotTransfer does not store your full card details.",
+          "Payments and subscription billing are handled securely by our payment provider.",
       },
       {
         id: "billing-5",
         question: "Where can I read the refund policy?",
         answer: (
           <>
-            You can review the{" "}
+            You can read the{" "}
             <Link to="/refund-policy" className="font-medium text-blue-400 hover:text-blue-300">
-              Refund Policy
+              refund policy
             </Link>{" "}
-            page for refund details. If you have a billing issue, contact support.
+            from the footer or legal links on this website.
           </>
         ),
       },
@@ -194,25 +219,30 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "privacy-1",
         question: "Where do my images go?",
         answer:
-          "Images are temporarily processed through QuickShot Cloud to deliver them to your paired Windows PC. After delivery, they are saved locally on your desktop. QuickShotTransfer is not permanent cloud storage.",
+          "Images are temporarily processed through QuickShot Cloud so they can be delivered to your paired Windows PC. The desktop app then saves them locally on your computer.",
       },
       {
         id: "privacy-2",
         question: "Are my images used for AI training?",
-        answer:
-          "No. QuickShotTransfer is a utility for delivering your images to your paired PC. Your images are not used for AI training.",
+        answer: "No. QuickShotTransfer does not use your uploaded images to train AI models.",
       },
       {
         id: "privacy-3",
-        question: "How do I request account or data deletion?",
+        question: "Does QuickShotTransfer store my images forever?",
         answer:
-          "Contact support from the email address on your account and ask for account or data deletion. Include the email connected to your QuickShotTransfer account so we can help.",
+          "No. QuickShotTransfer is designed for fast image handoff, not permanent cloud storage.",
       },
       {
         id: "privacy-4",
+        question: "How do I request account or data deletion?",
+        answer:
+          "Contact support from the email on this page and include the account email you used for QuickShotTransfer.",
+      },
+      {
+        id: "privacy-5",
         question: "How do I report a privacy concern?",
         answer:
-          "Email support with the subject ‘Privacy request’ and include the account email and a short description of the issue.",
+          "Email support with your account email and a short description of the issue so we can review it.",
       },
     ],
   },
@@ -222,45 +252,52 @@ export function SupportPage() {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Hero */}
-      <section className="pt-20 pb-10 sm:pt-28 sm:pb-12">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+      <section className="scroll-mt-24 pt-10 pb-6 sm:pt-12 sm:pb-8">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="mb-5 inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/20 px-4 py-1.5 text-sm font-semibold text-blue-300">
+            <div className="mb-4 inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/20 px-4 py-2 text-sm font-medium text-blue-300">
               Support
             </div>
-            <h1 className="mb-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            <h1 className="mb-4 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl">
               How can we help?
             </h1>
-            <p className="text-lg leading-relaxed text-gray-400 sm:text-xl">
-              Setup, pairing, uploads, billing, and privacy help for QuickShotTransfer.
+            <p className="hyphens-none text-lg leading-relaxed text-gray-400">
+              Setup, pairing, uploads, billing, and privacy help for{" "}
+              <span className="whitespace-nowrap">QuickShotTransfer</span>.
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-gray-500">
-              Most issues can be fixed by checking the Windows app, refreshing the phone upload
-              page, or generating a new QR code.
+            <p className="mt-4 hyphens-none text-sm leading-relaxed text-gray-500">
+              Most issues can be fixed by keeping the{" "}
+              <span className="whitespace-nowrap">Windows app</span> open, refreshing the{" "}
+              <span className="whitespace-nowrap">phone upload page</span>, or generating a new{" "}
+              <span className="whitespace-nowrap">QR code</span>.
             </p>
           </div>
         </div>
       </section>
 
       {/* Quick help */}
-      <section className="pb-12 sm:pb-16">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="pb-6 sm:pb-8">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
             {QUICK_HELP.map((item) => {
               const Icon = item.icon;
               return (
                 <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  className="group rounded-xl border border-gray-700 bg-gray-800/50 p-4 transition-colors hover:border-gray-600 hover:bg-gray-800/70"
+                  key={item.anchorId}
+                  href={`#${item.anchorId}`}
+                  className="group flex h-full cursor-pointer flex-col rounded-xl border border-gray-700 bg-gray-800/50 p-4 transition-colors hover:border-gray-600 hover:bg-gray-800/70 sm:p-5"
                 >
-                  <span className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-blue-500/25 bg-blue-500/15 text-blue-400 transition-colors group-hover:border-blue-400/40 group-hover:bg-blue-500/20">
+                  <span className="mb-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-blue-500/25 bg-blue-500/15 text-blue-400 transition-colors group-hover:border-blue-400/40 group-hover:bg-blue-500/20">
                     <Icon className="h-4 w-4" aria-hidden />
                   </span>
-                  <h2 className="mb-1 text-sm font-semibold text-white">{item.title}</h2>
-                  <p className="text-xs leading-relaxed text-gray-400">{item.description}</p>
+                  <h2 className="mb-2 text-sm font-semibold leading-snug text-white">
+                    {item.title}
+                  </h2>
+                  <p className="hyphens-none flex-1 text-[0.8125rem] leading-relaxed text-gray-400 sm:text-sm">
+                    {item.description}
+                  </p>
                 </a>
               );
             })}
@@ -268,28 +305,43 @@ export function SupportPage() {
         </div>
       </section>
 
-      {/* FAQ sections */}
-      <section className="pb-16 sm:pb-20">
+      {/* Try these first */}
+      <section className="pb-8 sm:pb-10">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <div className="space-y-12">
+          <div className="rounded-xl border border-gray-700/60 bg-gray-800/40 p-6 backdrop-blur-sm sm:p-7">
+            <h2 className="mb-5 text-base font-semibold tracking-tight text-white">
+              Try these first
+            </h2>
+            <ul className="space-y-3">
+              {TROUBLESHOOTING_ITEMS.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm leading-relaxed text-gray-300"
+                >
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-blue-500/20 bg-blue-500/10">
+                    <Check className="h-3 w-3 text-blue-400" aria-hidden />
+                  </span>
+                  <span className="hyphens-none">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ sections */}
+      <section className="pb-8 sm:pb-10">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="space-y-10">
             {FAQ_SECTIONS.map((section) => (
               <div key={section.id} id={section.id} className="scroll-mt-24">
-                <div className="mb-6">
+                <div className="mb-5">
                   <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                     {section.title}
                   </h2>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-400 sm:text-base">
+                  <p className="mt-2 hyphens-none text-sm leading-relaxed text-gray-400 sm:text-base">
                     {section.subheading}
                   </p>
-                  {section.id === "billing" ? (
-                    <p className="mt-2 text-sm text-gray-500">
-                      For full plan details, see the{" "}
-                      <Link to="/pricing" className="font-medium text-blue-400 hover:text-blue-300">
-                        Pricing page
-                      </Link>
-                      .
-                    </p>
-                  ) : null}
                 </div>
 
                 <div className="space-y-3">
@@ -307,7 +359,9 @@ export function SupportPage() {
                           className="flex w-full items-center justify-between gap-4 p-5 text-left sm:p-6"
                           aria-expanded={isOpen}
                         >
-                          <span className="text-base font-semibold text-white">{faq.question}</span>
+                          <span className="hyphens-none pr-2 text-base font-semibold leading-snug text-white">
+                            {faq.question}
+                          </span>
                           <ChevronDown
                             className={`h-5 w-5 flex-shrink-0 text-gray-500 transition-transform ${
                               isOpen ? "rotate-180" : ""
@@ -316,7 +370,7 @@ export function SupportPage() {
                         </button>
                         {isOpen ? (
                           <div className="border-t border-gray-700/50 px-5 pb-5 sm:px-6 sm:pb-6">
-                            <div className="pt-4 text-sm leading-relaxed text-gray-300 sm:text-[0.9375rem]">
+                            <div className="hyphens-none pt-4 text-sm leading-relaxed text-gray-300 sm:text-[0.9375rem]">
                               {faq.answer}
                             </div>
                           </div>
@@ -332,14 +386,14 @@ export function SupportPage() {
       </section>
 
       {/* Contact */}
-      <section className="border-t border-gray-800 bg-gray-800/30 py-16 sm:py-20">
+      <section className="border-t border-gray-800/80 bg-gray-800/40 pt-8 pb-10 sm:pt-10 sm:pb-12">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <div className="rounded-2xl border border-gray-700 bg-gray-800/50 p-8 text-center sm:p-10">
-            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-700 to-cyan-600 shadow-lg shadow-blue-600/25">
+          <div className="rounded-2xl border border-gray-700 bg-gray-800/50 p-7 text-center sm:p-9">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-700 to-cyan-600 shadow-lg shadow-blue-600/25">
               <Mail className="h-7 w-7 text-white" aria-hidden />
             </div>
             <h2 className="mb-3 text-2xl font-bold text-white">Still need help?</h2>
-            <p className="mb-8 text-sm leading-relaxed text-gray-400 sm:text-base">
+            <p className="mb-6 hyphens-none text-sm leading-relaxed text-gray-400 sm:text-base">
               Email us with your account email, Windows app version if known, what you tried, and
               any error message you saw.
             </p>
@@ -350,8 +404,7 @@ export function SupportPage() {
               <Mail className="h-5 w-5" aria-hidden />
               {SUPPORT_EMAIL}
             </a>
-            <p className="mt-6 text-sm text-gray-500">
-              Legal pages:{" "}
+            <p className="mt-5 text-sm text-gray-500">
               <Link to="/privacy" className="text-blue-400 hover:text-blue-300">
                 Privacy
               </Link>

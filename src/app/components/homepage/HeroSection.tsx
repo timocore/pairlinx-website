@@ -6,7 +6,7 @@ import { HeroProductPlaceholder } from "./HeroProductPlaceholder";
 
 export function HeroSection() {
   return (
-    <section className="relative pt-20 pb-8 sm:pb-10">
+    <section className="relative pb-8 sm:pb-10">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
         <div
           className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-600/40 to-purple-600/40 rounded-full blur-3xl animate-pulse"

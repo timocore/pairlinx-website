@@ -3,6 +3,7 @@ import { ProblemTeaserSection } from "../components/homepage/ProblemTeaserSectio
 import { FeaturedProductSection } from "../components/homepage/FeaturedProductSection";
 import { PlatformPrinciplesSection } from "../components/homepage/PlatformPrinciplesSection";
 import { FutureUtilitiesSection } from "../components/homepage/FutureUtilitiesSection";
+import { NewsletterSection } from "../components/homepage/NewsletterSection";
 import { CTASection } from "../components/homepage/CTASection";
 
 export function HomePage() {
@@ -13,6 +14,7 @@ export function HomePage() {
       <FeaturedProductSection />
       <PlatformPrinciplesSection />
       <FutureUtilitiesSection />
+      <NewsletterSection />
       <CTASection />
     </div>
   );

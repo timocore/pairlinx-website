@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Github, Linkedin, Youtube } from "lucide-react";
 import { Logo } from "./Logo";
+import { NewsletterSignup } from "./NewsletterSignup";
 import { BRAND_NAME, SOCIAL_LINKS, SUPPORT_EMAIL, type SocialLabel } from "../config";
 
 const footerLinkClass =
@@ -105,6 +106,9 @@ export function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="mt-10 max-w-md">
+          <NewsletterSignup variant="footer" />
         </div>
         <div className="mt-12 border-t border-gray-800/60 pt-8">
           <p className="text-center text-sm text-gray-500">

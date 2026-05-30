@@ -3,10 +3,10 @@ import { PRODUCT_NAME, SITE_URL } from "../config";
 /** Public desktop product name (Windows app). */
 export const INLET_PRODUCT_NAME = PRODUCT_NAME;
 
-export const INLET_DESKTOP_VERSION = "0.1.5";
+export const INLET_DESKTOP_VERSION = "0.1.6";
 
 /** URL-safe installer filename served from public/download/. */
-export const INLET_INSTALLER_FILENAME = "Inlet-Setup-0.1.5.exe";
+export const INLET_INSTALLER_FILENAME = "Inlet-Setup-0.1.6.exe";
 
 export const INLET_DOWNLOAD_PAGE_PATH = "/download";
 

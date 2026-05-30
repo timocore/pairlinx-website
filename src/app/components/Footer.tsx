@@ -63,6 +63,11 @@ export function Footer() {
                   Download
                 </Link>
               </li>
+              <li>
+                <Link to="/releases" className={footerLinkClass}>
+                  Release history
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

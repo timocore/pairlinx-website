@@ -1,16 +1,18 @@
 import { PRODUCT_NAME, SITE_URL } from "../config";
+import { INLET_LATEST_BETA, getLatestBetaInstallerUrl } from "../data/inletReleases";
 
 /** Public desktop product name (Windows app). */
 export const INLET_PRODUCT_NAME = PRODUCT_NAME;
 
-export const INLET_DESKTOP_VERSION = "0.1.7";
+/** Latest recommended installer (beta until 1.0.0 stable ships). */
+export const INLET_DESKTOP_VERSION = INLET_LATEST_BETA.version;
 
-/** URL-safe installer filename served from public/download/. */
-export const INLET_INSTALLER_FILENAME = "Inlet-Setup-0.1.7.exe";
+/** URL-safe installer filename served from `public/download/`. */
+export const INLET_INSTALLER_FILENAME = INLET_LATEST_BETA.installerFilename;
 
 export const INLET_DOWNLOAD_PAGE_PATH = "/download";
 
-export const INLET_INSTALLER_URL = `${SITE_URL}/download/${INLET_INSTALLER_FILENAME}`;
+export const INLET_INSTALLER_URL = getLatestBetaInstallerUrl();
 
 export const INLET_UPDATE_MANIFEST_URL = `${SITE_URL}/download/latest.json`;
 

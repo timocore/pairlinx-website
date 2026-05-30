@@ -28,6 +28,11 @@ const SEO_BY_PATH: Record<string, SeoEntry> = {
     description:
       "Download Inlet for Windows and send images from your iPhone browser to your paired PC using QR-based upload.",
   },
+  "/releases": {
+    title: "Inlet release history — Stable downloads",
+    description:
+      "Browse archived Inlet stable release installers and release notes. Beta builds are latest-only on the download page until version 1.0.0.",
+  },
   "/support": {
     title: "Inlet Support — Setup, uploads, billing, and privacy help",
     description:

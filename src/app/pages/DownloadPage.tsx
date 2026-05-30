@@ -20,6 +20,8 @@ import {
   INLET_RELEASE_NOTES_URL,
   INLET_UPGRADE_STEPS,
 } from "../config/inletDownload";
+import { INLET_RELEASE_HISTORY_PATH } from "../data/inletReleases";
+import { isStableRelease } from "../lib/semver";
 
 const heroTrustItems = [
   "Windows 10/11",
@@ -75,6 +77,8 @@ const phoneRequirements = [
 ] as const;
 
 export function DownloadPage() {
+  const isBetaBuild = !isStableRelease(INLET_DESKTOP_VERSION);
+
   return (
     <div className="overflow-x-hidden">
       {/* Hero */}
@@ -94,9 +98,16 @@ export function DownloadPage() {
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/20 px-4 py-2 text-sm font-medium text-blue-300">
-              <Download className="h-4 w-4" />
-              Windows desktop app
+            <div className="mb-4 flex flex-wrap items-center justify-center gap-2">
+              <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/20 px-4 py-2 text-sm font-medium text-blue-300">
+                <Download className="h-4 w-4" />
+                Windows desktop app
+              </div>
+              {isBetaBuild ? (
+                <span className="inline-flex items-center rounded-full border border-amber-500/35 bg-amber-500/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-200">
+                  Beta
+                </span>
+              ) : null}
             </div>
             <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Download {INLET_PRODUCT_NAME} for Windows
@@ -121,9 +132,33 @@ export function DownloadPage() {
                 Download for Windows (v{INLET_DESKTOP_VERSION})
               </Button>
               <p className="max-w-md text-sm leading-relaxed text-gray-500">
-                Desktop installer for {INLET_PRODUCT_NAME} {INLET_DESKTOP_VERSION}. Your browser may ask
-                you to confirm the download.
+                Latest recommended installer for {INLET_PRODUCT_NAME} {INLET_DESKTOP_VERSION}. Your
+                browser may ask you to confirm the download.
               </p>
+              {isBetaBuild ? (
+                <p className="max-w-lg text-xs leading-relaxed text-gray-500">
+                  Beta builds are latest-only. Older 0.x installers are not archived. Stable release
+                  history starts at 1.0.0 on{" "}
+                  <Link
+                    to={INLET_RELEASE_HISTORY_PATH}
+                    className="font-medium text-blue-400 hover:text-blue-300"
+                  >
+                    {INLET_RELEASE_HISTORY_PATH}
+                  </Link>
+                  .
+                </p>
+              ) : (
+                <p className="max-w-lg text-xs leading-relaxed text-gray-500">
+                  Previous stable versions are listed on{" "}
+                  <Link
+                    to={INLET_RELEASE_HISTORY_PATH}
+                    className="font-medium text-blue-400 hover:text-blue-300"
+                  >
+                    {INLET_RELEASE_HISTORY_PATH}
+                  </Link>
+                  .
+                </p>
+              )}
               <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2.5 text-sm text-gray-300">
                 {heroTrustItems.map((item) => (
                   <span key={item} className="inline-flex items-center gap-2">
@@ -324,6 +359,10 @@ export function DownloadPage() {
             <a href={INLET_RELEASE_NOTES_URL} className="font-medium text-blue-400 hover:text-blue-300">
               Release notes
             </a>
+            {" · "}
+            <Link to={INLET_RELEASE_HISTORY_PATH} className="font-medium text-blue-400 hover:text-blue-300">
+              Release history
+            </Link>
             .
           </p>
         </div>

@@ -5,6 +5,7 @@ import { HomePage } from "./pages/HomePage";
 import { ProductPage } from "./pages/ProductPage";
 import { PricingPage } from "./pages/PricingPage";
 import { DownloadPage } from "./pages/DownloadPage";
+import { ReleasesPage } from "./pages/ReleasesPage";
 import { SupportPage } from "./pages/SupportPage";
 import { ContactPage } from "./pages/ContactPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
@@ -27,6 +28,8 @@ export const router = createBrowserRouter([
       },
       { path: "pricing", element: <PricingPage /> },
       { path: "download", element: <DownloadPage /> },
+      { path: "releases", element: <ReleasesPage /> },
+      { path: "changelog", element: <Navigate to="/releases" replace /> },
       { path: "support", element: <SupportPage /> },
       { path: "contact", element: <ContactPage /> },
       { path: "privacy", element: <PrivacyPage /> },

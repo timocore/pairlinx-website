@@ -4,6 +4,7 @@ import { FeaturedProductSection } from "../components/homepage/FeaturedProductSe
 import { PlatformPrinciplesSection } from "../components/homepage/PlatformPrinciplesSection";
 import { FutureUtilitiesSection } from "../components/homepage/FutureUtilitiesSection";
 import { CTASection } from "../components/homepage/CTASection";
+import { NewsletterPreFooter } from "../components/NewsletterPreFooter";
 
 export function HomePage() {
   return (
@@ -14,6 +15,7 @@ export function HomePage() {
       <PlatformPrinciplesSection />
       <FutureUtilitiesSection />
       <CTASection />
+      <NewsletterPreFooter />
     </div>
   );
 }

@@ -2,7 +2,6 @@ import { Outlet, useLocation } from "react-router";
 import { useEffect } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { NewsletterPreFooter } from "./NewsletterPreFooter";
 import { SeoMeta } from "./SeoMeta";
 
 function ScrollToTop() {
@@ -32,7 +31,6 @@ export function RootLayout() {
       <main className="flex-1">
         <Outlet />
       </main>
-      <NewsletterPreFooter />
       <Footer />
     </div>
   );

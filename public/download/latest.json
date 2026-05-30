@@ -1,0 +1,16 @@
+{
+  "product": "inlet",
+  "version": "0.1.5",
+  "downloadUrl": "https://pairlinx.com/download",
+  "installerUrl": "https://pairlinx.com/download/Inlet-Setup-0.1.5.exe",
+  "installerFilename": "Inlet-Setup-0.1.5.exe",
+  "releaseNotesUrl": "https://pairlinx.com/support#release-notes",
+  "required": false,
+  "publishedAt": "2026-05-30",
+  "notes": [
+    "Rebrand to Inlet with refreshed Windows icons",
+    "Improved installer reliability and faster install size",
+    "Cancel enabled during install if setup appears stuck",
+    "Quit from tray before upgrading to avoid file locks"
+  ]
+}

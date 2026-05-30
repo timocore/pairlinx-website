@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 interface ButtonProps {
   to?: string;
   href?: string;
+  download?: boolean | string;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   children: ReactNode;
@@ -11,7 +12,7 @@ interface ButtonProps {
   className?: string;
 }
 
-export function Button({ to, href, variant = "primary", size = "md", children, onClick, className = "" }: ButtonProps) {
+export function Button({ to, href, download, variant = "primary", size = "md", children, onClick, className = "" }: ButtonProps) {
   const baseStyles = "inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none";
 
   const variantStyles = {
@@ -35,7 +36,11 @@ export function Button({ to, href, variant = "primary", size = "md", children, o
   }
 
   if (href) {
-    return <a href={href} className={classes}>{children}</a>;
+    return (
+      <a href={href} download={download} className={classes}>
+        {children}
+      </a>
+    );
   }
 
   return <button onClick={onClick} className={classes}>{children}</button>;

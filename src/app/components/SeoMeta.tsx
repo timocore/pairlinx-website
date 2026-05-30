@@ -24,9 +24,9 @@ const SEO_BY_PATH: Record<string, SeoEntry> = {
       "Start free with 30 image transfers per month or upgrade to Pro for higher usage, larger image uploads, and daily iPhone-to-PC workflows.",
   },
   "/download": {
-    title: "Download QuickShotTransfer for Windows",
+    title: "Download Inlet for Windows",
     description:
-      "Download QuickShotTransfer for Windows and send images from your iPhone browser to your paired PC using QR-based upload.",
+      "Download Inlet for Windows (formerly QuickShotTransfer) and send images from your iPhone browser to your paired PC using QR-based upload.",
   },
   "/support": {
     title: "QuickShotTransfer Support — Setup, uploads, billing, and privacy help",

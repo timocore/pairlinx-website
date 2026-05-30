@@ -10,6 +10,7 @@ import {
 import { useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import { SUPPORT_EMAIL } from "../config";
+import { INLET_DESKTOP_VERSION, INLET_LEGACY_PRODUCT_NAME, INLET_PRODUCT_NAME } from "../config/inletDownload";
 
 type QuickHelpItem = {
   anchorId: string;
@@ -69,6 +70,20 @@ const TROUBLESHOOTING_ITEMS = [
   "Refresh the phone upload page.",
   "Generate a new QR code if the old one expired.",
   "Check your internet connection and your local save folder.",
+] as const;
+
+const RELEASE_NOTES = [
+  {
+    version: INLET_DESKTOP_VERSION,
+    publishedAt: "2026-05-30",
+    title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
+    items: [
+      "Rebrand to Inlet with refreshed Windows icons",
+      "Improved installer reliability and smaller install size",
+      "Cancel enabled during install if setup appears stuck",
+      "Quit from tray before upgrading to avoid file locks",
+    ],
+  },
 ] as const;
 
 const FAQ_SECTIONS: FaqSection[] = [
@@ -380,6 +395,41 @@ export function SupportPage() {
                   })}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Release notes */}
+      <section id="release-notes" className="scroll-mt-24 pb-8 sm:pb-10">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="mb-5">
+            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">Release notes</h2>
+            <p className="mt-2 text-sm leading-relaxed text-gray-400 sm:text-base">
+              What&apos;s new in {INLET_PRODUCT_NAME} (formerly {INLET_LEGACY_PRODUCT_NAME}).
+            </p>
+          </div>
+          <div className="space-y-4">
+            {RELEASE_NOTES.map((release) => (
+              <article
+                key={release.version}
+                className="rounded-xl border border-gray-700 bg-gray-800/50 p-5 backdrop-blur-sm sm:p-6"
+              >
+                <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-lg font-semibold text-white">{release.title}</h3>
+                  <time dateTime={release.publishedAt} className="text-xs text-gray-500">
+                    {release.publishedAt}
+                  </time>
+                </div>
+                <ul className="space-y-2 text-sm leading-relaxed text-gray-300">
+                  {release.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" aria-hidden />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
             ))}
           </div>
         </div>

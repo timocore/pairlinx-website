@@ -9,11 +9,22 @@ import {
   Smartphone,
   Wifi,
   User,
+  RefreshCw,
 } from "lucide-react";
 import { Button } from "../components/Button";
+import {
+  INLET_DESKTOP_VERSION,
+  INLET_INSTALLER_FILENAME,
+  INLET_INSTALLER_URL,
+  INLET_LEGACY_PRODUCT_NAME,
+  INLET_PRODUCT_NAME,
+  INLET_RELEASE_NOTES_URL,
+  INLET_UPGRADE_STEPS,
+} from "../config/inletDownload";
 
 const heroTrustItems = [
   "Windows 10/11",
+  `Version ${INLET_DESKTOP_VERSION}`,
   "Free plan available",
   "No iPhone app required",
   "Sign-in required",
@@ -23,7 +34,7 @@ const whatYouNeedItems = [
   { icon: Monitor, label: "Windows 10/11 PC" },
   { icon: Smartphone, label: "iPhone with browser" },
   { icon: Wifi, label: "Internet connection" },
-  { icon: User, label: "QuickShotTransfer account" },
+  { icon: User, label: `${INLET_PRODUCT_NAME} account` },
 ] as const;
 
 const setupSteps = [
@@ -54,7 +65,7 @@ const desktopRequirements = [
   "Windows 10 or Windows 11",
   "64-bit Windows",
   "Internet connection",
-  "QuickShotTransfer desktop app running",
+  `${INLET_PRODUCT_NAME} desktop app running`,
 ] as const;
 
 const phoneRequirements = [
@@ -89,21 +100,30 @@ export function DownloadPage() {
               Windows desktop app
             </div>
             <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Download QuickShotTransfer for Windows.
+              Download {INLET_PRODUCT_NAME} for Windows
             </h1>
-            <p className="mb-8 text-lg leading-relaxed text-gray-400">
+            <p className="mb-2 text-lg leading-relaxed text-gray-400">
               Install the desktop app, sign in, scan the QR code, and start sending images from your
               iPhone to your PC.
             </p>
+            <p className="mb-8 text-sm text-gray-500">
+              {INLET_PRODUCT_NAME} is the desktop app from Pairlinx (formerly {INLET_LEGACY_PRODUCT_NAME}).
+            </p>
 
             <div className="inline-flex w-full max-w-xl flex-col items-center gap-4">
-              <Button variant="primary" size="lg" className="w-full px-10 shadow-xl shadow-blue-600/40 sm:w-auto">
+              <Button
+                href={INLET_INSTALLER_URL}
+                download={INLET_INSTALLER_FILENAME}
+                variant="primary"
+                size="lg"
+                className="w-full px-10 shadow-xl shadow-blue-600/40 sm:w-auto"
+              >
                 <Download className="h-5 w-5" />
-                Download for Windows
+                Download for Windows (v{INLET_DESKTOP_VERSION})
               </Button>
               <p className="max-w-md text-sm leading-relaxed text-gray-500">
-                Desktop installer for QuickShotTransfer. Your browser may ask you to confirm the
-                download.
+                Desktop installer for {INLET_PRODUCT_NAME} {INLET_DESKTOP_VERSION}. Your browser may ask
+                you to confirm the download.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2.5 text-sm text-gray-300">
                 {heroTrustItems.map((item) => (
@@ -132,6 +152,42 @@ export function DownloadPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upgrade instructions */}
+      <section className="relative overflow-hidden pt-4 pb-8 sm:pb-10">
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl rounded-xl border border-amber-500/25 bg-amber-500/10 p-6 backdrop-blur-sm sm:p-7">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-amber-400/30 bg-amber-500/15">
+                <RefreshCw className="h-5 w-5 text-amber-300" aria-hidden />
+              </span>
+              <div className="text-left">
+                <h2 className="text-lg font-semibold text-white">Upgrading from an older version?</h2>
+                <p className="text-sm text-amber-100/80">
+                  Follow these steps so the installer does not hang on file locks.
+                </p>
+              </div>
+            </div>
+            <ol className="space-y-3 text-left text-sm leading-relaxed text-gray-200">
+              {INLET_UPGRADE_STEPS.map((step, index) => (
+                <li key={step} className="flex gap-3">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-500/20 text-xs font-bold text-amber-200">
+                    {index + 1}
+                  </span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-5 text-sm text-gray-400">
+              See{" "}
+              <a href={INLET_RELEASE_NOTES_URL} className="font-medium text-blue-400 hover:text-blue-300">
+                release notes
+              </a>{" "}
+              for what changed in v{INLET_DESKTOP_VERSION}.
+            </p>
           </div>
         </div>
       </section>
@@ -265,6 +321,10 @@ export function DownloadPage() {
             <Link to="/support" className="font-medium text-blue-400 hover:text-blue-300">
               Visit support
             </Link>
+            {" · "}
+            <a href={INLET_RELEASE_NOTES_URL} className="font-medium text-blue-400 hover:text-blue-300">
+              Release notes
+            </a>
             .
           </p>
         </div>

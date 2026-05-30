@@ -25,7 +25,7 @@ export function FeaturedProductPreview({ embedded = false }: FeaturedProductPrev
         <div className="overflow-hidden rounded-lg border border-slate-200/30 bg-white shadow-xl shadow-black/45 ring-1 ring-white/15">
           <img
             src={PRODUCT_HERO_PC}
-            alt="QuickShotTransfer Windows inbox with recent image transfers"
+            alt="Inlet Windows inbox with recent image transfers"
             className="block w-full h-auto"
             loading="lazy"
             decoding="async"
@@ -41,7 +41,7 @@ export function FeaturedProductPreview({ embedded = false }: FeaturedProductPrev
             <div className="overflow-hidden rounded-[0.95rem] bg-black ring-1 ring-white/5">
               <img
                 src={PRODUCT_HERO_PHONE}
-                alt="QuickShotTransfer iPhone browser upload page"
+                alt="Inlet iPhone browser upload page"
                 className="block w-full h-auto"
                 loading="lazy"
                 decoding="async"
@@ -52,7 +52,7 @@ export function FeaturedProductPreview({ embedded = false }: FeaturedProductPrev
       </div>
 
       <p className="mt-4 text-center text-xs leading-relaxed text-gray-500">
-        iPhone browser → QuickShot Cloud → saved locally on Windows
+        iPhone browser → Inlet Cloud → saved locally on Windows
       </p>
     </div>
   );

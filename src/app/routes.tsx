@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter } from "react-router";
+import { Navigate, createBrowserRouter } from "react-router";
 import { RootLayout } from "./components/RootLayout";
 import { HomePage } from "./pages/HomePage";
 import { ProductPage } from "./pages/ProductPage";
@@ -20,7 +20,11 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "products/quickshottransfer", element: <ProductPage /> },
+      { path: "products/inlet", element: <ProductPage /> },
+      {
+        path: "products/Inlet",
+        element: <Navigate to="/products/inlet" replace />,
+      },
       { path: "pricing", element: <PricingPage /> },
       { path: "download", element: <DownloadPage /> },
       { path: "support", element: <SupportPage /> },

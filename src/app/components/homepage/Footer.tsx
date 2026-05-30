@@ -22,7 +22,7 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/products/quickshottransfer" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link to="/products/inlet" className="text-gray-400 hover:text-white transition-colors text-sm">
                   {PRODUCT_NAME}
                 </Link>
               </li>

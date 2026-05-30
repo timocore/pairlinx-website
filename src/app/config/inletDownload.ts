@@ -1,10 +1,7 @@
-import { SITE_URL } from "../config";
+import { PRODUCT_NAME, SITE_URL } from "../config";
 
 /** Public desktop product name (Windows app). */
-export const INLET_PRODUCT_NAME = "Inlet";
-
-/** Legacy name shown where helpful during the rebrand. */
-export const INLET_LEGACY_PRODUCT_NAME = "QuickShotTransfer";
+export const INLET_PRODUCT_NAME = PRODUCT_NAME;
 
 export const INLET_DESKTOP_VERSION = "0.1.5";
 

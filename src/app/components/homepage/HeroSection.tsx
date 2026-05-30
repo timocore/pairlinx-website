@@ -47,7 +47,7 @@ export function HeroSection() {
 
             <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
               <Link
-                to="/products/quickshottransfer"
+                to="/products/inlet"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl inline-flex items-center justify-center gap-3 transition-all shadow-xl shadow-blue-600/40 hover:shadow-2xl hover:shadow-purple-600/50 hover:scale-[1.02] w-full sm:w-auto"
               >
                 Explore {PRODUCT_NAME}

@@ -50,8 +50,8 @@ export function Footer() {
             <h3 className="mb-4 text-sm font-semibold text-gray-100">Product</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/products/quickshottransfer" className={footerLinkClass}>
-                  QuickShotTransfer
+                <Link to="/products/inlet" className={footerLinkClass}>
+                  Inlet
                 </Link>
               </li>
               <li>

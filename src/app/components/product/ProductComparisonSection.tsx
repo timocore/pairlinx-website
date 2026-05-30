@@ -34,7 +34,7 @@ export function ProductComparisonSection() {
             Why not just use email, iCloud, or Phone Link?
           </h2>
           <p className="text-lg leading-relaxed text-gray-400">
-            QuickShotTransfer is not trying to replace those tools. It is built for fast image handoff
+            Inlet is not trying to replace those tools. It is built for fast image handoff
             when you need a screenshot or photo on your Windows PC now.
           </p>
         </motion.div>
@@ -79,7 +79,7 @@ export function ProductComparisonSection() {
                 <div className="flex size-10 items-center justify-center rounded-lg border border-white/15 bg-white/10 backdrop-blur-sm">
                   <Check className="size-5 text-white" />
                 </div>
-                <h3 className="text-xl font-bold sm:text-2xl">QuickShotTransfer</h3>
+                <h3 className="text-xl font-bold sm:text-2xl">Inlet</h3>
               </div>
 
               <p className="mb-5 text-sm text-white/85 sm:text-base">

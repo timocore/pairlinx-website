@@ -55,7 +55,7 @@ export function FeaturedProductSection() {
               </p>
               <p className="mb-8 text-sm leading-relaxed text-gray-400">
                 Send image files from your iPhone browser to your Windows PC. Images are
-                temporarily processed through QuickShot Cloud and saved locally on your desktop.
+                temporarily processed through Inlet Cloud and saved locally on your desktop.
                 Image-only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF.
               </p>
 
@@ -70,7 +70,7 @@ export function FeaturedProductSection() {
 
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
-                  to="/products/quickshottransfer"
+                  to="/products/inlet"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02] hover:from-blue-700 hover:to-purple-700"
                 >
                   View product

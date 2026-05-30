@@ -79,7 +79,7 @@ export function ComparisonSection() {
                 <div className="size-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
                   <Check className="size-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold">QuickShotTransfer</h3>
+                <h3 className="text-2xl font-bold">Inlet</h3>
               </div>
 
               <p className="mb-6 text-base text-white/90 sm:text-lg lg:text-xl">

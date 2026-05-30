@@ -31,7 +31,7 @@ const howItWorksSteps = [
     number: 1,
     icon: Laptop,
     title: "Install the Windows app",
-    description: "Download and install QuickShotTransfer on your PC.",
+    description: "Download and install Inlet on your PC.",
     chipClass: "border-blue-500/25 bg-blue-500/10",
     iconClass: "text-blue-400",
   },
@@ -150,14 +150,14 @@ const audiences = [
 
 const faqs = [
   {
-    question: "Is QuickShotTransfer just another cloud drive?",
+    question: "Is Inlet just another cloud drive?",
     answer:
-      "No. QuickShotTransfer is built for fast image handoff, not permanent cloud storage. Images are temporarily processed through QuickShot Cloud so they can be delivered to your paired Windows PC, then saved locally on your computer.",
+      "No. Inlet is built for fast image handoff, not permanent cloud storage. Images are temporarily processed through Inlet Cloud so they can be delivered to your paired Windows PC, then saved locally on your computer.",
   },
   {
     question: "Do I need to install an iPhone app?",
     answer:
-      "No. In the current version, your phone uses a browser upload page. Open QuickShotTransfer on your Windows PC, scan the QR code with your iPhone, choose images, and send them.",
+      "No. In the current version, your phone uses a browser upload page. Open Inlet on your Windows PC, scan the QR code with your iPhone, choose images, and send them.",
   },
   {
     question: "Do I need an account?",
@@ -167,32 +167,32 @@ const faqs = [
   {
     question: "How does sending images work?",
     answer:
-      "Install the Windows app, sign in, scan the QR code, then choose images from your iPhone browser. QuickShotTransfer sends them through QuickShot Cloud and saves them to your local desktop folder.",
+      "Install the Windows app, sign in, scan the QR code, then choose images from your iPhone browser. Inlet sends them through Inlet Cloud and saves them to your local desktop folder.",
   },
   {
     question: "Where do my images go?",
     answer:
-      "Images are delivered to your paired Windows PC and saved locally in your QuickShotTransfer folder. QuickShotTransfer is not meant to replace your permanent storage, photo library, or cloud backup.",
+      "Images are delivered to your paired Windows PC and saved locally in your Inlet folder. Inlet is not meant to replace your permanent storage, photo library, or cloud backup.",
   },
   {
-    question: "How long are images kept in QuickShot Cloud?",
+    question: "How long are images kept in Inlet Cloud?",
     answer:
-      "Images are temporarily processed through QuickShot Cloud for delivery. They are not stored as a permanent cloud library — once delivered, your copies live in your local QuickShotTransfer folder on Windows.",
+      "Images are temporarily processed through Inlet Cloud for delivery. They are not stored as a permanent cloud library — once delivered, your copies live in your local Inlet folder on Windows.",
   },
   {
     question: "What happens if my PC is off?",
     answer:
-      "If your PC is off before you send, the phone page may not be able to complete the normal handoff. If images are already uploaded while your PC is offline, QuickShotTransfer will attempt delivery when the desktop app reconnects, as long as the upload is still available under the plan’s retention rules.",
+      "If your PC is off before you send, the phone page may not be able to complete the normal handoff. If images are already uploaded while your PC is offline, Inlet will attempt delivery when the desktop app reconnects, as long as the upload is still available under the plan’s retention rules.",
   },
   {
     question: "What image formats are supported?",
     answer:
-      "QuickShotTransfer supports image uploads such as JPG, JPEG, PNG, WEBP, HEIC, and HEIF.",
+      "Inlet supports image uploads such as JPG, JPEG, PNG, WEBP, HEIC, and HEIF.",
   },
   {
     question: "Can I send PDFs, ZIP files, videos, or documents?",
     answer:
-      "Not in the current version. QuickShotTransfer is focused on image handoff only, so it stays fast, simple, and built around screenshots, photos, receipts, notes, and visual references.",
+      "Not in the current version. Inlet is focused on image handoff only, so it stays fast, simple, and built around screenshots, photos, receipts, notes, and visual references.",
   },
   {
     question: "What are the Free plan limits?",
@@ -223,7 +223,7 @@ export function ProductPage() {
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-500/20 px-4 py-2 text-sm font-medium text-blue-300 border border-blue-500/30">
               <span className="size-2 bg-blue-400 rounded-full animate-pulse" />
               <Image className="h-4 w-4" />
-              QuickShotTransfer
+              Inlet
             </div>
 
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-5 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
@@ -232,7 +232,7 @@ export function ProductPage() {
 
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               For creators, builders, and anyone who screenshots on iPhone and works on Windows.
-              QuickShotTransfer is a visual capture inbox — send images from your phone browser to your
+              Inlet is a visual capture inbox — send images from your phone browser to your
               PC without hunting through email or sync folders.
             </p>
 
@@ -328,7 +328,7 @@ export function ProductPage() {
               Not a general file-transfer app. A visual workflow shortcut.
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed">
-              QuickShotTransfer is designed around the moment you need a screenshot or photo on your
+              Inlet is designed around the moment you need a screenshot or photo on your
               desktop right now.
             </p>
           </div>
@@ -366,7 +366,7 @@ export function ProductPage() {
               Made for screenshot-heavy work.
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed">
-              If you capture on your phone and create on your PC, QuickShotTransfer fits how you already work.
+              If you capture on your phone and create on your PC, Inlet fits how you already work.
             </p>
           </div>
 
@@ -399,7 +399,7 @@ export function ProductPage() {
       {/* 6. Why not email / iCloud / Phone Link */}
       <ProductComparisonSection />
 
-      {/* 7. QuickShot Cloud delivery */}
+      {/* 7. Inlet Cloud delivery */}
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -418,7 +418,7 @@ export function ProductPage() {
               </span>
               <ArrowRight className="h-4 w-4 shrink-0 text-gray-500" />
               <span className="px-3.5 py-1.5 rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                QuickShot Cloud
+                Inlet Cloud
               </span>
               <ArrowRight className="h-4 w-4 shrink-0 text-gray-500" />
               <span className="px-3.5 py-1.5 rounded-lg bg-green-500/20 text-green-300 border border-green-500/30">
@@ -428,8 +428,8 @@ export function ProductPage() {
 
             <div className="mx-auto max-w-2xl space-y-3">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Images are temporarily processed through QuickShot Cloud to deliver them to your paired
-                PC. The desktop app saves them to your local QuickShotTransfer folder — not permanent
+                Images are temporarily processed through Inlet Cloud to deliver them to your paired
+                PC. The desktop app saves them to your local Inlet folder — not permanent
                 cloud storage.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">

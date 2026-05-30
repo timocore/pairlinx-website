@@ -49,7 +49,7 @@ export function PricingLimitsTable() {
           Plan limits at a glance
         </h2>
         <p className="text-sm text-gray-400 leading-relaxed max-w-2xl mx-auto sm:text-base">
-          QuickShotTransfer is image-only by design — built for screenshots, photos, and visual
+          Inlet is image-only by design — built for screenshots, photos, and visual
           references, not general file storage.
         </p>
       </div>

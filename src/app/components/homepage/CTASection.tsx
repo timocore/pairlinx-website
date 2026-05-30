@@ -43,7 +43,7 @@ export function CTASection() {
 
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link
-                to="/products/quickshottransfer"
+                to="/products/inlet"
                 className="text-white/95 px-10 py-4 rounded-xl inline-flex items-center gap-3 font-semibold text-lg border border-white/25 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/40 transition-colors"
               >
                 View product

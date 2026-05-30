@@ -5,7 +5,7 @@ import { Logo } from "./Logo";
 import { Button } from "./Button";
 
 const NAV_LINKS = [
-  { to: "/products/quickshottransfer", label: "Products" },
+  { to: "/products/inlet", label: "Products" },
   { to: "/pricing", label: "Pricing" },
   { to: "/download", label: "Download" },
   { to: "/support", label: "Support" },

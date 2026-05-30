@@ -18,7 +18,7 @@ export function PricingPage() {
               Start free. Upgrade when image handoff becomes part of your daily workflow.
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed">
-              QuickShotTransfer gives you a free way to start sending images from your iPhone browser
+              Inlet gives you a free way to start sending images from your iPhone browser
               to your Windows desktop. Pro is for heavier daily use, larger images, and smoother repeat
               workflows.
             </p>
@@ -51,7 +51,7 @@ export function PricingPage() {
               Start free today. Upgrade when you need more room.
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed mb-7">
-              Download QuickShotTransfer for Windows and begin with the Free plan. No credit card
+              Download Inlet for Windows and begin with the Free plan. No credit card
               required.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -59,7 +59,7 @@ export function PricingPage() {
                 <Download className="h-5 w-5" />
                 Download for Windows
               </Button>
-              <Button to="/products/quickshottransfer" variant="secondary" size="lg">
+              <Button to="/products/inlet" variant="secondary" size="lg">
                 View product
                 <ArrowRight className="h-5 w-5" />
               </Button>

@@ -11,47 +11,47 @@ const SEO_BY_PATH: Record<string, SeoEntry> = {
   "/": {
     title: "Pairlinx — Simple utilities for phone and computer workflows",
     description:
-      "Pairlinx builds focused cross-device utilities that make phone-to-computer workflows faster. Start with QuickShotTransfer for iPhone-to-PC image handoff.",
+      "Pairlinx builds focused cross-device utilities that make phone-to-computer workflows faster. Start with Inlet for iPhone-to-PC image handoff.",
   },
-  "/products/quickshottransfer": {
-    title: "QuickShotTransfer — Send images from iPhone to PC in seconds",
+  "/products/inlet": {
+    title: "Inlet — Send images from iPhone to PC in seconds",
     description:
-      "QuickShotTransfer is an instant visual capture inbox for iPhone-to-Windows workflows. Send screenshots, photos, and visual references from your phone browser to your PC.",
+      "Inlet is an instant visual capture inbox for iPhone-to-Windows workflows. Send screenshots, photos, and visual references from your phone browser to your PC.",
   },
   "/pricing": {
-    title: "QuickShotTransfer Pricing — Free and Pro plans",
+    title: "Inlet Pricing — Free and Pro plans",
     description:
       "Start free with 30 image transfers per month or upgrade to Pro for higher usage, larger image uploads, and daily iPhone-to-PC workflows.",
   },
   "/download": {
     title: "Download Inlet for Windows",
     description:
-      "Download Inlet for Windows (formerly QuickShotTransfer) and send images from your iPhone browser to your paired PC using QR-based upload.",
+      "Download Inlet for Windows and send images from your iPhone browser to your paired PC using QR-based upload.",
   },
   "/support": {
-    title: "QuickShotTransfer Support — Setup, uploads, billing, and privacy help",
+    title: "Inlet Support — Setup, uploads, billing, and privacy help",
     description:
-      "Get help with QuickShotTransfer installation, QR pairing, image uploads, billing, privacy requests, and troubleshooting.",
+      "Get help with Inlet installation, QR pairing, image uploads, billing, privacy requests, and troubleshooting.",
   },
   "/contact": {
     title: "Contact Pairlinx",
     description:
-      "Contact Pairlinx for QuickShotTransfer support, billing questions, privacy requests, partnerships, and general questions.",
+      "Contact Pairlinx for Inlet support, billing questions, privacy requests, partnerships, and general questions.",
   },
   "/privacy": {
     title: "Privacy Policy — Pairlinx",
     description:
-      "Learn how Pairlinx and QuickShotTransfer handle account information, uploaded images, usage data, billing status, and support requests.",
+      "Learn how Pairlinx and Inlet handle account information, uploaded images, usage data, billing status, and support requests.",
   },
   "/terms": {
     title: "Terms of Service — Pairlinx",
     description:
-      "Review the terms that govern your use of QuickShotTransfer and Pairlinx services.",
+      "Review the terms that govern your use of Inlet and Pairlinx services.",
   },
   "/refund-policy": {
     title: "Refund Policy — Pairlinx",
     description:
-      "Learn how refunds, cancellations, and billing support work for QuickShotTransfer Pro subscriptions.",
+      "Learn how refunds, cancellations, and billing support work for Inlet Pro subscriptions.",
   },
 };
 

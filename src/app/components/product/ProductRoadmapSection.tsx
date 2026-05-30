@@ -37,7 +37,7 @@ export function ProductRoadmapSection() {
             What&apos;s coming next
           </h2>
           <p className="text-sm leading-relaxed text-gray-400 sm:text-base">
-            QuickShotTransfer is starting with fast iPhone-to-PC image handoff. Next, we&apos;re
+            Inlet is starting with fast iPhone-to-PC image handoff. Next, we&apos;re
             exploring tools that make your visual workflow easier to search, organize, and reuse.
           </p>
         </div>

@@ -1,5 +1,8 @@
 export const BRAND_NAME = "Pairlinx";
-export const PRODUCT_NAME = "QuickShotTransfer";
+export const PRODUCT_NAME = "Inlet";
+
+/** Canonical product page path (legacy /products/inlet redirects here). */
+export const PRODUCT_PATH = "/products/inlet";
 
 /** Primary support contact — update this one address for the whole site. */
 export const SUPPORT_EMAIL = "support@pairlinx.com";

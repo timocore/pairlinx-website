@@ -1,7 +1,7 @@
 
-  # Pairlinx / QuickShotTransfer Marketing Website
+  # Pairlinx / Inlet Marketing Website
 
-  This is the marketing website for Pairlinx and its first product, QuickShotTransfer.
+  This is the marketing website for Pairlinx and Inlet, our iPhone-to-PC image handoff app for Windows.
 
   ## Running the code
 

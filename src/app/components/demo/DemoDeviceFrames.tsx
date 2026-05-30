@@ -39,7 +39,7 @@ export function DesktopDeviceFrame({
             <span className="size-2.5 rounded-full bg-slate-600" />
           </div>
           <span className="flex-1 text-center text-[10px] font-medium text-slate-400 truncate">
-            QuickShotTransfer
+            Inlet
           </span>
           <span className="w-8" />
         </div>

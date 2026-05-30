@@ -51,7 +51,7 @@ export function PrivacyPage() {
           ]}
         />
         <LegalParagraph>
-          Uploaded images are temporarily processed through QuickShot Cloud so they can be delivered
+          Uploaded images are temporarily processed through Inlet Cloud so they can be delivered
           to your paired device.
         </LegalParagraph>
         <LegalParagraph>
@@ -70,7 +70,7 @@ export function PrivacyPage() {
         <LegalOrderedList
           items={[
             "Your iPhone browser uploads the selected image",
-            "The image is temporarily processed through QuickShot Cloud",
+            "The image is temporarily processed through Inlet Cloud",
             "The image is delivered to your paired Windows desktop app",
             "The desktop app saves the image locally on your PC",
           ]}

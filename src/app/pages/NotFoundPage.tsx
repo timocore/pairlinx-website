@@ -31,8 +31,8 @@ export function NotFoundPage() {
             <Button to="/" variant="primary" size="md">
               Go home
             </Button>
-            <Button to="/products/quickshottransfer" variant="outline" size="md">
-              View QuickShotTransfer
+            <Button to="/products/inlet" variant="outline" size="md">
+              View Inlet
             </Button>
           </div>
 

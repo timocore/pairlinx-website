@@ -17,7 +17,7 @@ export function EnhancedProductMockup() {
       <div className="relative rounded-sm bg-white shadow-2xl shadow-blue-950/20 border border-slate-200/90 overflow-hidden ring-1 ring-slate-200/80">
         <img
           src={PRODUCT_HERO_PC}
-          alt="QuickShotTransfer desktop app — recent transfers grid on Windows"
+          alt="Inlet desktop app — recent transfers grid on Windows"
           className="block w-full h-auto"
           loading="eager"
           decoding="async"
@@ -48,7 +48,7 @@ export function EnhancedProductMockup() {
             <div className="overflow-hidden rounded-[2.15rem] bg-black">
               <img
                 src={PRODUCT_HERO_PHONE}
-                alt="QuickShotTransfer upload page in iPhone browser — choose images and send to your PC"
+                alt="Inlet upload page in iPhone browser — choose images and send to your PC"
                 className="block w-full h-auto"
                 loading="eager"
                 decoding="async"

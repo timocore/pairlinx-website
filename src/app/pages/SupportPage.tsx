@@ -10,7 +10,7 @@ import {
 import { useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import { SUPPORT_EMAIL } from "../config";
-import { INLET_DESKTOP_VERSION, INLET_LEGACY_PRODUCT_NAME, INLET_PRODUCT_NAME } from "../config/inletDownload";
+import { INLET_DESKTOP_VERSION, INLET_PRODUCT_NAME } from "../config/inletDownload";
 
 type QuickHelpItem = {
   anchorId: string;
@@ -65,7 +65,7 @@ const QUICK_HELP: QuickHelpItem[] = [
 ];
 
 const TROUBLESHOOTING_ITEMS = [
-  "Keep the QuickShotTransfer Windows app open.",
+  "Keep the Inlet Windows app open.",
   "Confirm you are signed in on the desktop app.",
   "Refresh the phone upload page.",
   "Generate a new QR code if the old one expired.",
@@ -90,11 +90,11 @@ const FAQ_SECTIONS: FaqSection[] = [
   {
     id: "installation",
     title: "Installation help",
-    subheading: "Get QuickShotTransfer running on your Windows PC.",
+    subheading: "Get Inlet running on your Windows PC.",
     questions: [
       {
         id: "install-1",
-        question: "How do I install QuickShotTransfer on Windows?",
+        question: "How do I install Inlet on Windows?",
         answer:
           "Download the Windows installer, open it, and follow the setup steps. After installation, sign in and keep the desktop app running while you send images from your phone.",
       },
@@ -102,7 +102,7 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "install-2",
         question: "Where do my transferred images appear?",
         answer:
-          "Images appear in the QuickShotTransfer desktop inbox and are saved locally on your Windows PC. You can copy the latest image, preview it, or open the save folder from the app.",
+          "Images appear in the Inlet desktop inbox and are saved locally on your Windows PC. You can copy the latest image, preview it, or open the save folder from the app.",
       },
       {
         id: "install-3",
@@ -114,7 +114,7 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "install-4",
         question: "What if Windows shows a security warning?",
         answer:
-          "Windows may ask you to confirm before opening a new desktop installer. Only continue if you downloaded QuickShotTransfer from this website.",
+          "Windows may ask you to confirm before opening a new desktop installer. Only continue if you downloaded Inlet from this website.",
       },
     ],
   },
@@ -128,13 +128,13 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "pairing-1",
         question: "How do I send images from my iPhone?",
         answer:
-          "Open QuickShotTransfer on Windows, scan the QR code with your iPhone camera, choose images in your browser, and send them to your paired PC.",
+          "Open Inlet on Windows, scan the QR code with your iPhone camera, choose images in your browser, and send them to your paired PC.",
       },
       {
         id: "pairing-2",
         question: "Do I need an iPhone app?",
         answer:
-          "No. QuickShotTransfer uses your iPhone browser, so there is no separate iPhone app to install.",
+          "No. Inlet uses your iPhone browser, so there is no separate iPhone app to install.",
       },
       {
         id: "pairing-3",
@@ -158,7 +158,7 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "pairing-6",
         question: "My file format is not supported. What can I send?",
         answer:
-          "QuickShotTransfer supports image files only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF.",
+          "Inlet supports image files only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF.",
       },
       {
         id: "pairing-7",
@@ -234,24 +234,24 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "privacy-1",
         question: "Where do my images go?",
         answer:
-          "Images are temporarily processed through QuickShot Cloud so they can be delivered to your paired Windows PC. The desktop app then saves them locally on your computer.",
+          "Images are temporarily processed through Inlet Cloud so they can be delivered to your paired Windows PC. The desktop app then saves them locally on your computer.",
       },
       {
         id: "privacy-2",
         question: "Are my images used for AI training?",
-        answer: "No. QuickShotTransfer does not use your uploaded images to train AI models.",
+        answer: "No. Inlet does not use your uploaded images to train AI models.",
       },
       {
         id: "privacy-3",
-        question: "Does QuickShotTransfer store my images forever?",
+        question: "Does Inlet store my images forever?",
         answer:
-          "No. QuickShotTransfer is designed for fast image handoff, not permanent cloud storage.",
+          "No. Inlet is designed for fast image handoff, not permanent cloud storage.",
       },
       {
         id: "privacy-4",
         question: "How do I request account or data deletion?",
         answer:
-          "Contact support from the email on this page and include the account email you used for QuickShotTransfer.",
+          "Contact support from the email on this page and include the account email you used for Inlet.",
       },
       {
         id: "privacy-5",
@@ -280,7 +280,7 @@ export function SupportPage() {
             </h1>
             <p className="hyphens-none text-lg leading-relaxed text-gray-400">
               Setup, pairing, uploads, billing, and privacy help for{" "}
-              <span className="whitespace-nowrap">QuickShotTransfer</span>.
+              <span className="whitespace-nowrap">Inlet</span>.
             </p>
             <p className="mt-4 hyphens-none text-sm leading-relaxed text-gray-500">
               Most issues can be fixed by keeping the{" "}
@@ -406,7 +406,7 @@ export function SupportPage() {
           <div className="mb-5">
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">Release notes</h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-400 sm:text-base">
-              What&apos;s new in {INLET_PRODUCT_NAME} (formerly {INLET_LEGACY_PRODUCT_NAME}).
+              What&apos;s new in {INLET_PRODUCT_NAME}.
             </p>
           </div>
           <div className="space-y-4">

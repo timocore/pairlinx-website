@@ -16,7 +16,6 @@ import {
   INLET_DESKTOP_VERSION,
   INLET_INSTALLER_FILENAME,
   INLET_INSTALLER_URL,
-  INLET_LEGACY_PRODUCT_NAME,
   INLET_PRODUCT_NAME,
   INLET_RELEASE_NOTES_URL,
   INLET_UPGRADE_STEPS,
@@ -107,7 +106,7 @@ export function DownloadPage() {
               iPhone to your PC.
             </p>
             <p className="mb-8 text-sm text-gray-500">
-              {INLET_PRODUCT_NAME} is the desktop app from Pairlinx (formerly {INLET_LEGACY_PRODUCT_NAME}).
+              {INLET_PRODUCT_NAME} is the desktop app from Pairlinx.
             </p>
 
             <div className="inline-flex w-full max-w-xl flex-col items-center gap-4">
@@ -254,7 +253,7 @@ export function DownloadPage() {
                   </h3>
                   <p className="text-base leading-relaxed text-gray-400">
                     Your phone upload page is paired to your desktop session. Images are temporarily
-                    processed through QuickShot Cloud and delivered to your paired Windows PC.
+                    processed through Inlet Cloud and delivered to your paired Windows PC.
                   </p>
                 </div>
               </div>

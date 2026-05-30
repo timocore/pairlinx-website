@@ -160,7 +160,7 @@ export function ContactPage() {
               Get in touch.
             </h1>
             <p className="text-lg leading-relaxed text-gray-400">
-              Questions about QuickShotTransfer, billing, support, privacy, or partnerships? Send us
+              Questions about Inlet, billing, support, privacy, or partnerships? Send us
               a message and we&apos;ll get back to you.
             </p>
           </div>

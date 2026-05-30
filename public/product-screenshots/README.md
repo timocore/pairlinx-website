@@ -1,4 +1,4 @@
-# QuickShotTransfer product screenshots
+# Inlet product screenshots
 
 Drop PNG screenshots here for the interactive marketing demo (`InteractiveQuickShotDemo`).
 

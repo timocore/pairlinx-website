@@ -157,7 +157,7 @@ export function InteractiveQuickShotDemo({ className = "" }: InteractiveQuickSho
             <motion.div key={desktopSrc} {...slideVariants} className="relative">
               <DesktopDeviceFrame
                 src={desktopSrc}
-                alt={`QuickShotTransfer — ${desktopState}`}
+                alt={`Inlet — ${desktopState}`}
                 hotspots={desktopHotspots}
                 overlay={
                   phoneState === "sending" && !isCompact ? (
@@ -219,7 +219,7 @@ export function InteractiveQuickShotDemo({ className = "" }: InteractiveQuickSho
               <motion.div key={phoneSrc} {...slideVariants}>
                 <PhoneDeviceFrame
                   src={phoneSrc}
-                  alt={`QuickShotTransfer phone — ${phoneState}`}
+                  alt={`Inlet phone — ${phoneState}`}
                   hotspots={phoneHotspots}
                   overlay={
                     phoneState === "sending" ? (

@@ -161,7 +161,7 @@ function confirmationEmailText(name: string): string {
     "",
     "We received your message — Pairlinx.",
     "",
-    "Thanks for reaching out about QuickShotTransfer. Our support team will review your note and follow up as soon as possible.",
+    "Thanks for reaching out about Inlet. Our support team will review your note and follow up as soon as possible.",
     "",
     "If you need to add more context, reply to this email with any additional details.",
     "",

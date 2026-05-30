@@ -50,7 +50,7 @@ export function BeforeAfterSection() {
 
           <article className="rounded-2xl border border-green-500/25 bg-gradient-to-br from-blue-900/30 via-gray-800/50 to-purple-900/30 p-6 backdrop-blur-sm shadow-lg shadow-blue-600/5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/15 text-green-300 text-xs font-semibold uppercase tracking-wide mb-5 border border-green-500/25">
-              With QuickShotTransfer
+              With Inlet
             </div>
             <ul className="space-y-4">
               {afterItems.map((item, i) => (

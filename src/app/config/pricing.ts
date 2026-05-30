@@ -71,7 +71,7 @@ export const PRO_FEATURES_COMPACT = [
 export const PRICING_FAQ = [
   {
     q: "Is the Free plan really free?",
-    a: "Yes. The Free plan costs $0 and does not require a credit card. It is designed so you can try QuickShotTransfer before upgrading.",
+    a: "Yes. The Free plan costs $0 and does not require a credit card. It is designed so you can try Inlet before upgrading.",
   },
   {
     q: "What is included in the Free plan?",
@@ -103,7 +103,7 @@ export const PRICING_FAQ = [
   },
   {
     q: "What file types can I send?",
-    a: "QuickShotTransfer supports image formats only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF. It is not for PDFs, ZIP files, videos, or documents.",
+    a: "Inlet supports image formats only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF. It is not for PDFs, ZIP files, videos, or documents.",
   },
   {
     q: "Can I cancel Pro anytime?",

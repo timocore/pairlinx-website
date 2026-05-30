@@ -32,9 +32,25 @@ This site separates **beta** (0.x) distribution from **stable** (1.0.0+) archive
 
 ## Publishing a new beta
 
-1. Update `INLET_LATEST_BETA`, `inletDownload.ts`, and `public/download/latest.json` to the new version only.
-2. Do **not** add the version to `INLET_STABLE_RELEASES`.
-3. Do **not** add old beta installers to `/download/releases/`.
+1. **Create the GitHub Release first** on `timocore/pairlinx-website`:
+   - Tag: `v0.1.x` (must match `vercel.json` redirect, e.g. `v0.1.8`)
+   - Asset filename: `Inlet-Setup-0.1.x.exe` (URL-safe; rename from `Inlet Setup 0.1.x.exe` if needed)
+   - Example (from the folder containing the renamed installer):
+
+     ```powershell
+     Copy-Item "release-v027\Inlet Setup 0.1.8.exe" "Inlet-Setup-0.1.8.exe"
+     & "C:\Program Files\GitHub CLI\gh.exe" release create v0.1.8 `
+       --repo timocore/pairlinx-website `
+       --title "Inlet 0.1.8" `
+       --notes "Release notes here." `
+       "Inlet-Setup-0.1.8.exe"
+     ```
+
+2. Verify the asset exists: `node scripts/verify-inlet-github-release.mjs`
+3. Update `INLET_LATEST_BETA`, `public/download/latest.json`, and add a matching redirect in `vercel.json`.
+4. Deploy the website. `/download/Inlet-Setup-x.exe` redirects to GitHub; a missing release causes a 404.
+5. Do **not** add the version to `INLET_STABLE_RELEASES`.
+6. Do **not** add old beta installers to `/download/releases/`.
 
 ## Validation checklist
 

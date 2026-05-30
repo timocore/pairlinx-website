@@ -14,6 +14,13 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/download/Inlet-Setup-0.1.5.exe",
+      "destination": "https://github.com/timocore/pairlinx-website/releases/download/v0.1.5/Inlet-Setup-0.1.5.exe",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }

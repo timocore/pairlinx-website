@@ -1,0 +1,2 @@
+# Vercel CLI upload limit is 100 MB per file; host the installer via GitHub Releases.
+public/download/*.exe

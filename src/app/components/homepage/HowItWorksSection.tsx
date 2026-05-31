@@ -141,7 +141,7 @@ export function HowItWorksSection() {
                       <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
                     </svg>
                   </div>
-                  <div className="mt-3 font-semibold text-sm text-white">Inlet Cloud</div>
+                  <div className="mt-3 font-semibold text-sm text-white">Pairlinx Cloud</div>
                   <div className="text-xs text-gray-400">Instant & secure</div>
                 </div>
               </div>

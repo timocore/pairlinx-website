@@ -288,7 +288,7 @@ export function DownloadPage() {
                   </h3>
                   <p className="text-base leading-relaxed text-gray-400">
                     Your phone upload page is paired to your desktop session. Images are temporarily
-                    processed through Inlet Cloud and delivered to your paired Windows PC.
+                    processed through Pairlinx Cloud and delivered to your paired Windows PC.
                   </p>
                 </div>
               </div>

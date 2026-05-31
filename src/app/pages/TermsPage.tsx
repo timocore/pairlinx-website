@@ -35,7 +35,7 @@ export function TermsPage() {
           ]}
         />
         <LegalParagraph>
-          Images are temporarily processed through Inlet Cloud for delivery purposes and are
+          Images are temporarily processed through Pairlinx Cloud for delivery purposes and are
           saved locally on your Windows computer by the desktop application.
         </LegalParagraph>
         <LegalParagraph>{PRODUCT_NAME} supports image uploads only.</LegalParagraph>

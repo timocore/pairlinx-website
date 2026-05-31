@@ -55,7 +55,7 @@ export function FeaturedProductSection() {
               </p>
               <p className="mb-8 text-sm leading-relaxed text-gray-400">
                 Send image files from your iPhone browser to your Windows PC. Images are
-                temporarily processed through Inlet Cloud and saved locally on your desktop.
+                temporarily processed through Pairlinx Cloud and saved locally on your desktop.
                 Image-only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF.
               </p>
 

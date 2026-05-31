@@ -234,7 +234,7 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "privacy-1",
         question: "Where do my images go?",
         answer:
-          "Images are temporarily processed through Inlet Cloud so they can be delivered to your paired Windows PC. The desktop app then saves them locally on your computer.",
+          "Images are temporarily processed through Pairlinx Cloud so they can be delivered to your paired Windows PC. The desktop app then saves them locally on your computer.",
       },
       {
         id: "privacy-2",

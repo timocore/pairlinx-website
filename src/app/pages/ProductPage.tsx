@@ -152,7 +152,7 @@ const faqs = [
   {
     question: "Is Inlet just another cloud drive?",
     answer:
-      "No. Inlet is built for fast image handoff, not permanent cloud storage. Images are temporarily processed through Inlet Cloud so they can be delivered to your paired Windows PC, then saved locally on your computer.",
+      "No. Inlet is built for fast image handoff, not permanent cloud storage. Images are temporarily processed through Pairlinx Cloud so they can be delivered to your paired Windows PC, then saved locally on your computer.",
   },
   {
     question: "Do I need to install an iPhone app?",
@@ -167,7 +167,7 @@ const faqs = [
   {
     question: "How does sending images work?",
     answer:
-      "Install the Windows app, sign in, scan the QR code, then choose images from your iPhone browser. Inlet sends them through Inlet Cloud and saves them to your local desktop folder.",
+      "Install the Windows app, sign in, scan the QR code, then choose images from your iPhone browser. Inlet sends them through Pairlinx Cloud and saves them to your local desktop folder.",
   },
   {
     question: "Where do my images go?",
@@ -175,9 +175,9 @@ const faqs = [
       "Images are delivered to your paired Windows PC and saved locally in your Inlet folder. Inlet is not meant to replace your permanent storage, photo library, or cloud backup.",
   },
   {
-    question: "How long are images kept in Inlet Cloud?",
+    question: "How long are images kept in Pairlinx Cloud?",
     answer:
-      "Images are temporarily processed through Inlet Cloud for delivery. They are not stored as a permanent cloud library — once delivered, your copies live in your local Inlet folder on Windows.",
+      "Images are temporarily processed through Pairlinx Cloud for delivery. They are not stored as a permanent cloud library — once delivered, your copies live in your local Inlet folder on Windows.",
   },
   {
     question: "What happens if my PC is off?",
@@ -399,7 +399,7 @@ export function ProductPage() {
       {/* 6. Why not email / iCloud / Phone Link */}
       <ProductComparisonSection />
 
-      {/* 7. Inlet Cloud delivery */}
+      {/* 7. Pairlinx Cloud delivery */}
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -418,7 +418,7 @@ export function ProductPage() {
               </span>
               <ArrowRight className="h-4 w-4 shrink-0 text-gray-500" />
               <span className="px-3.5 py-1.5 rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                Inlet Cloud
+                Pairlinx Cloud
               </span>
               <ArrowRight className="h-4 w-4 shrink-0 text-gray-500" />
               <span className="px-3.5 py-1.5 rounded-lg bg-green-500/20 text-green-300 border border-green-500/30">
@@ -428,7 +428,7 @@ export function ProductPage() {
 
             <div className="mx-auto max-w-2xl space-y-3">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Images are temporarily processed through Inlet Cloud to deliver them to your paired
+                Images are temporarily processed through Pairlinx Cloud to deliver them to your paired
                 PC. The desktop app saves them to your local Inlet folder — not permanent
                 cloud storage.
               </p>

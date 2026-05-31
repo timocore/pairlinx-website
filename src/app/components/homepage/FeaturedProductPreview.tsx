@@ -52,7 +52,7 @@ export function FeaturedProductPreview({ embedded = false }: FeaturedProductPrev
       </div>
 
       <p className="mt-4 text-center text-xs leading-relaxed text-gray-500">
-        iPhone browser → Inlet Cloud → saved locally on Windows
+        iPhone browser → Pairlinx Cloud → saved locally on Windows
       </p>
     </div>
   );

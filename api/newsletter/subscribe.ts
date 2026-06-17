@@ -1,22 +1,22 @@
-import type { ApiRequest, ApiResponse, SubscribeResponse } from "../lib/newsletter/types";
+import type { ApiRequest, ApiResponse, SubscribeResponse } from "../lib/newsletter/types.js";
 import {
   NEWSLETTER_CONSENT_VERSION,
   getNewsletterConfig,
-} from "../lib/newsletter/config";
-import { isRateLimited } from "../lib/newsletter/rateLimit";
+} from "../lib/newsletter/config.js";
+import { isRateLimited } from "../lib/newsletter/rateLimit.js";
 import {
   getNewsletterContact,
   sendConfirmationEmail,
   upsertPendingContact,
-} from "../lib/newsletter/resend";
-import { createNewsletterToken } from "../lib/newsletter/tokens";
+} from "../lib/newsletter/resend.js";
+import { createNewsletterToken } from "../lib/newsletter/tokens.js";
 import {
   getClientIp,
   getContentLength,
   isValidEmail,
   parseJsonBody,
   sanitizeEmail,
-} from "../lib/newsletter/validate";
+} from "../lib/newsletter/validate.js";
 
 const MAX_CONTENT_LENGTH_BYTES = 4_000;
 
@@ -112,7 +112,8 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
 
     const response: SubscribeResponse = { ok: true, status: "confirmation_sent" };
     res.status(200).json(response);
-  } catch {
+  } catch (error) {
+    console.error("Newsletter subscription failed", error);
     res.status(500).json({ ok: false, error: "Unable to process subscription." });
   }
 }

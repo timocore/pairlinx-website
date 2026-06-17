@@ -1,7 +1,7 @@
-import type { ApiRequest, ApiResponse } from "../lib/newsletter/types";
-import { getNewsletterConfig } from "../lib/newsletter/config";
-import { unsubscribeNewsletterContact } from "../lib/newsletter/resend";
-import { verifyNewsletterToken } from "../lib/newsletter/tokens";
+import type { ApiRequest, ApiResponse } from "../lib/newsletter/types.js";
+import { getNewsletterConfig } from "../lib/newsletter/config.js";
+import { unsubscribeNewsletterContact } from "../lib/newsletter/resend.js";
+import { verifyNewsletterToken } from "../lib/newsletter/tokens.js";
 
 function getQueryToken(req: ApiRequest): string {
   const raw = req.query?.token;

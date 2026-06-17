@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from "crypto";
-import { CONFIRM_TOKEN_TTL_SECONDS, UNSUBSCRIBE_TOKEN_TTL_SECONDS } from "./config";
+import { CONFIRM_TOKEN_TTL_SECONDS, UNSUBSCRIBE_TOKEN_TTL_SECONDS } from "./config.js";
 
 export type TokenPurpose = "confirm" | "unsubscribe";
 

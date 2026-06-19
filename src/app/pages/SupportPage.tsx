@@ -75,13 +75,13 @@ const TROUBLESHOOTING_ITEMS = [
 const RELEASE_NOTES = [
   {
     version: INLET_DESKTOP_VERSION,
-    publishedAt: "2026-05-30",
+    publishedAt: "2026-06-19",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
-      "Rebrand to Inlet with refreshed Windows icons",
-      "Improved installer reliability and smaller install size",
-      "Cancel enabled during install if setup appears stuck",
-      "Quit from tray before upgrading to avoid file locks",
+      "New Inlet open-N icon across the app, installer, desktop shortcut, taskbar, tray, and phone upload page",
+      "Optically sized Windows icon layers for stronger visual weight without clipping at small sizes",
+      "Multi-resolution ICO and synchronized SVG/PNG assets for consistent branding across Windows and web surfaces",
+      "Mobile batch uploads continue after a stalled image and allow failed images to be retried",
     ],
   },
 ] as const;

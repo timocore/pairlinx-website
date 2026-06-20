@@ -1,9 +1,9 @@
 {
   "company": "Pairlinx",
   "product": "Inlet",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "required": false,
   "downloadUrl": "https://pairlinx.com/download",
-  "installerUrl": "https://pairlinx.com/download/Inlet-Setup-0.1.18.exe",
+  "installerUrl": "https://pairlinx.com/download/Inlet-Setup-0.1.19.exe",
   "releaseNotesUrl": "https://pairlinx.com/support#release-notes"
 }

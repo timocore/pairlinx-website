@@ -75,13 +75,13 @@ const TROUBLESHOOTING_ITEMS = [
 const RELEASE_NOTES = [
   {
     version: INLET_DESKTOP_VERSION,
-    publishedAt: "2026-06-19",
+    publishedAt: "2026-06-20",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
-      "New Inlet open-N icon across the app, installer, desktop shortcut, taskbar, tray, and phone upload page",
-      "Optically sized Windows icon layers for stronger visual weight without clipping at small sizes",
-      "Multi-resolution ICO and synchronized SVG/PNG assets for consistent branding across Windows and web surfaces",
-      "Mobile batch uploads continue after a stalled image and allow failed images to be retried",
+      "Microsoft-signed Windows installer, app executable, and uninstaller with verified publisher Toader Timoc",
+      "Trusted Microsoft timestamps keep release signatures verifiable after certificate rotation",
+      "Automated signing and verification now run before update metadata and installer blockmaps are generated",
+      "Includes the new Inlet icon and resilient mobile batch-upload improvements from the previous beta",
     ],
   },
 ] as const;
@@ -114,7 +114,7 @@ const FAQ_SECTIONS: FaqSection[] = [
         id: "install-4",
         question: "What if Windows shows a security warning?",
         answer:
-          "Windows may ask you to confirm before opening a new desktop installer. Only continue if you downloaded Inlet from this website.",
+          "Windows may ask you to confirm before opening a new desktop installer. Download Inlet only from this website and confirm that Windows shows the verified publisher as Toader Timoc.",
       },
     ],
   },

@@ -75,8 +75,19 @@ const TROUBLESHOOTING_ITEMS = [
 const RELEASE_NOTES = [
   {
     version: INLET_DESKTOP_VERSION,
-    publishedAt: "2026-06-21",
+    publishedAt: "2026-06-20",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
+    items: [
+      "QR codes stay scannable for four hours; phone upload sessions stay active for four hours after you first open the link",
+      "Upload time starts when you scan and open the link on your phone, not when the QR is generated on desktop",
+      "Multiple phones can share the same QR code and upload to the same desktop",
+      "Desktop automatically renews the QR shortly before it expires during long sessions",
+    ],
+  },
+  {
+    version: "0.1.22",
+    publishedAt: "2026-06-21",
+    title: `${INLET_PRODUCT_NAME} 0.1.22`,
     items: [
       "Upload pairing links stay valid for 60 minutes after you generate the QR code",
       "Phone upload page no longer shows a false expired message after a brief screen lock",

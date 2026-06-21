@@ -78,10 +78,10 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-20",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
-      "Microsoft-signed Windows installer, app executable, and uninstaller with verified publisher Toader Timoc",
-      "Trusted Microsoft timestamps keep release signatures verifiable after certificate rotation",
-      "Automated signing and verification now run before update metadata and installer blockmaps are generated",
-      "Includes the new Inlet icon and resilient mobile batch-upload improvements from the previous beta",
+      "New rounded N-shape Inlet icon across the app, desktop shortcut, taskbar, tray, installer, and phone upload page",
+      "Windows Task Manager and file properties now identify the application as Inlet by Pairlinx instead of Electron",
+      "Microsoft-signed installer, application executable, and uninstaller with verified publisher Toader Timoc",
+      "Trusted Microsoft timestamps preserve signature verification after certificate rotation",
     ],
   },
 ] as const;

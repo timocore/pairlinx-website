@@ -78,6 +78,19 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-20",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "One desktop notification per phone batch instead of split messages mid-transfer",
+      "Free-plan usage counter updates after transfers without manual refresh",
+      "Expired upload links now prompt you to scan the QR code again before choosing images",
+      "Clearer Stripe checkout success and Pro activation feedback across the app",
+      "Billing emails for welcome, scheduled cancel, and subscription ended when configured",
+      "Cancel at period end keeps Pro active until the billing cycle ends",
+    ],
+  },
+  {
+    version: "0.1.20",
+    publishedAt: "2026-06-20",
+    title: `${INLET_PRODUCT_NAME} 0.1.20`,
+    items: [
       "New rounded N-shape Inlet icon across the app, desktop shortcut, taskbar, tray, installer, and phone upload page",
       "Windows Task Manager and file properties now identify the application as Inlet by Pairlinx instead of Electron",
       "Microsoft-signed installer, application executable, and uninstaller with verified publisher Toader Timoc",

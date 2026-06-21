@@ -14,8 +14,8 @@ export type InletStableRelease = {
  * Not included in stable release history; older betas are not archived.
  */
 export const INLET_LATEST_BETA = {
-  version: "0.1.21",
-  installerFilename: "Inlet-Setup-0.1.21.exe",
+  version: "0.1.22",
+  installerFilename: "Inlet-Setup-0.1.22.exe",
 } as const;
 
 /** Stable installers live under `public/download/releases/` (>= 1.0.0 only). */

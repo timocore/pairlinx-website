@@ -75,8 +75,19 @@ const TROUBLESHOOTING_ITEMS = [
 const RELEASE_NOTES = [
   {
     version: INLET_DESKTOP_VERSION,
-    publishedAt: "2026-06-20",
+    publishedAt: "2026-06-21",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
+    items: [
+      "Upload pairing links stay valid for 60 minutes after you generate the QR code",
+      "Phone upload page no longer shows a false expired message after a brief screen lock",
+      "Desktop keeps the same QR for up to an hour; use Refresh QR when you need a new link sooner",
+      "Stale phone upload tabs clear expired tokens so rescanning works reliably",
+    ],
+  },
+  {
+    version: "0.1.21",
+    publishedAt: "2026-06-20",
+    title: `${INLET_PRODUCT_NAME} 0.1.21`,
     items: [
       "One desktop notification per phone batch instead of split messages mid-transfer",
       "Free-plan usage counter updates after transfers without manual refresh",

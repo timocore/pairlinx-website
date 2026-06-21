@@ -24,7 +24,7 @@ function LegalOrderedList({ items }: { items: string[] }) {
 
 export function PrivacyPage() {
   return (
-    <LegalPageLayout title="Privacy Policy" lastUpdated="May 18, 2026">
+    <LegalPageLayout title="Privacy Policy" lastUpdated="June 21, 2026">
       <LegalParagraph>
         This Privacy Policy explains how {BRAND_NAME} and {PRODUCT_NAME} handle information when you
         use the {PRODUCT_NAME} service.
@@ -197,6 +197,11 @@ export function PrivacyPage() {
           Images uploaded through {PRODUCT_NAME} are processed temporarily for delivery purposes.
         </LegalParagraph>
         <LegalParagraph>
+          Cloud delivery copies are normally deleted after the paired desktop confirms successful
+          delivery. A storage lifecycle rule is used as a safety net to automatically delete
+          abandoned or undelivered image objects within seven days.
+        </LegalParagraph>
+        <LegalParagraph>
           Images delivered to your Windows PC are stored locally on your computer by the desktop
           application.
         </LegalParagraph>
@@ -243,6 +248,11 @@ export function PrivacyPage() {
         />
         <LegalParagraph>
           These providers may process information as necessary to perform services on our behalf.
+        </LegalParagraph>
+        <LegalParagraph>
+          Cloudflare R2 provides temporary object storage for image delivery. Cloudflare processes
+          those objects as an infrastructure provider under its applicable service terms and data
+          protection commitments.
         </LegalParagraph>
       </LegalSection>
 

@@ -14,7 +14,7 @@ function LegalSubheading({ children }: { children: ReactNode }) {
 
 export function TermsPage() {
   return (
-    <LegalPageLayout title="Terms of Service" lastUpdated="May 18, 2026">
+    <LegalPageLayout title="Terms of Service" lastUpdated="June 21, 2026">
       <LegalParagraph>
         These Terms of Service (&quot;Terms&quot;) govern your use of {PRODUCT_NAME} and related
         services provided by {BRAND_NAME} (&quot;{BRAND_NAME},&quot; &quot;we,&quot; &quot;our,&quot;
@@ -229,6 +229,11 @@ export function TermsPage() {
         />
         <LegalParagraph>
           Those services may be governed by their own terms and privacy practices.
+        </LegalParagraph>
+        <LegalParagraph>
+          Current infrastructure providers include Cloudflare R2 for temporary image-object
+          storage, Supabase for authentication and database services, Railway for hosted API
+          infrastructure, and Stripe for subscription billing.
         </LegalParagraph>
       </LegalSection>
 

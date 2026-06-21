@@ -22,7 +22,7 @@ export function FeaturedProductPreview({ embedded = false }: FeaturedProductPrev
             : "rounded-xl p-1 ring-1 ring-white/10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)]"
         }`}
       >
-        <div className="overflow-hidden rounded-lg border border-slate-200/30 bg-white shadow-xl shadow-black/45 ring-1 ring-white/15">
+        <div className="overflow-hidden rounded-[2px] border border-slate-200/30 bg-white shadow-xl shadow-black/45 ring-1 ring-white/15">
           <img
             src={PRODUCT_HERO_PC}
             alt="Inlet Windows inbox with recent image transfers"

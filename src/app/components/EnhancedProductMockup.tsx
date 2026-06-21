@@ -13,8 +13,8 @@ export function EnhancedProductMockup() {
         <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-indigo-300 to-purple-400 shadow-lg shadow-indigo-500/12 -rotate-12 ring-1 ring-white/70"></div>
       </div>
 
-      {/* Desktop — real Windows app screenshot (sharp corners) */}
-      <div className="relative rounded-sm bg-white shadow-2xl shadow-blue-950/20 border border-slate-200/90 overflow-hidden ring-1 ring-slate-200/80">
+      {/* Desktop — real Windows app screenshot (minimal corner radius) */}
+      <div className="relative rounded-[4px] bg-white shadow-2xl shadow-blue-950/20 border border-slate-200/90 overflow-hidden ring-1 ring-slate-200/80">
         <img
           src={PRODUCT_HERO_PC}
           alt="Inlet desktop app — recent transfers grid on Windows"

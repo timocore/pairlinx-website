@@ -20,10 +20,10 @@ export function HeroProductPlaceholder() {
       />
 
       <div className="relative mx-auto w-full max-w-[min(100%,400px)] sm:max-w-[520px] lg:max-w-[560px] px-2 pr-4 sm:px-0 sm:pr-6">
-        <div className="relative overflow-visible rounded-xl p-1 ring-1 ring-white/10 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.55)]">
+        <div className="relative overflow-visible p-0 ring-1 ring-white/10 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.55)]">
           {/* Desktop — primary visual anchor (~70%) */}
           <div className="relative z-10">
-            <div className="overflow-hidden rounded-lg border border-slate-200/30 bg-white shadow-2xl shadow-black/50 ring-1 ring-white/20">
+            <div className="overflow-hidden rounded-[4px] border border-slate-200/30 bg-white shadow-2xl shadow-black/50 ring-1 ring-white/20">
               <img
                 src={PRODUCT_HERO_PC}
                 alt="Inlet desktop app — recent transfers grid on Windows"

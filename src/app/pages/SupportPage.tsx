@@ -79,6 +79,14 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "Fixes startup crash on fresh install — a required sync module was missing from the installer since 0.1.24",
+    ],
+  },
+  {
+    version: "0.1.26",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.26`,
+    items: [
       "Tray icon appears immediately while Inlet loads in the background",
       "Second launch waits for startup instead of a misleading already-running message",
       "Restart Inlet button recovers when the window does not appear",

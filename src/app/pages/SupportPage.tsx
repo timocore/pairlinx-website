@@ -79,6 +79,14 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "Installer Cancel button works on all wizard pages, including when upgrading an existing install",
+    ],
+  },
+  {
+    version: "0.1.29",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.29`,
+    items: [
       "With Keep running in tray when closed unchecked, closing the window with X now fully quits Inlet instead of leaving background processes in Task Manager",
     ],
   },

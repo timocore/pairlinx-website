@@ -79,6 +79,16 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "Faster single-photo receive: 5-second idle poll, 750 ms turbo poll, and immediate sync when you open or focus Inlet",
+      "Open Error Log from the system tray for quicker support troubleshooting",
+      "Windows release builds verify packaged server modules before packaging to prevent startup crashes",
+    ],
+  },
+  {
+    version: "0.1.27",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.27`,
+    items: [
       "Fixes startup crash on fresh install — a required sync module was missing from the installer since 0.1.24",
     ],
   },

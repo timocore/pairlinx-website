@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { ReactNode } from "react";
 import { BRAND_NAME, PRIVACY_EMAIL, PRODUCT_NAME } from "../config";
+import { FREE_PLAN_LEGAL_LIMITS, PRO_PLAN_LEGAL_LIMITS } from "../config/pricing";
 import {
   LegalList,
   LegalPageLayout,
@@ -24,7 +25,7 @@ function LegalOrderedList({ items }: { items: string[] }) {
 
 export function PrivacyPage() {
   return (
-    <LegalPageLayout title="Privacy Policy" lastUpdated="June 21, 2026">
+    <LegalPageLayout title="Privacy Policy" lastUpdated="June 23, 2026">
       <LegalParagraph>
         This Privacy Policy explains how {BRAND_NAME} and {PRODUCT_NAME} handle information when you
         use the {PRODUCT_NAME} service.
@@ -148,10 +149,10 @@ export function PrivacyPage() {
         <LegalParagraph>Current plan limits:</LegalParagraph>
 
         <LegalSubheading>Free Plan</LegalSubheading>
-        <LegalList items={["30 images per month", "Up to 5 MB per image"]} />
+        <LegalList items={[...FREE_PLAN_LEGAL_LIMITS]} />
 
         <LegalSubheading>Pro Plan</LegalSubheading>
-        <LegalList items={["Up to 15,000 images per month", "Up to 50 MB per image"]} />
+        <LegalList items={[...PRO_PLAN_LEGAL_LIMITS]} />
 
         <LegalParagraph>Limits may change as the product evolves.</LegalParagraph>
       </LegalSection>

@@ -22,6 +22,7 @@ import { Link } from "react-router";
 import { Button } from "../components/Button";
 import { EnhancedProductMockup } from "../components/EnhancedProductMockup";
 import { PricingPlans } from "../components/pricing/PricingPlans";
+import { FREE_PLAN_SUMMARY } from "../config/pricing";
 import { BeforeAfterSection } from "../components/product/BeforeAfterSection";
 import { ProductRoadmapSection } from "../components/product/ProductRoadmapSection";
 import { ProductComparisonSection } from "../components/product/ProductComparisonSection";
@@ -196,8 +197,7 @@ const faqs = [
   },
   {
     question: "What are the Free plan limits?",
-    answer:
-      "The Free plan is for trying the workflow and occasional use. It includes 30 images per month and images up to 5 MB each.",
+    answer: FREE_PLAN_SUMMARY,
   },
 ];
 

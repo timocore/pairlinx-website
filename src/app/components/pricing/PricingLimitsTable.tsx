@@ -15,6 +15,11 @@ const rows = [
     pro: PLAN_LIMITS.pro.maxFileSize,
   },
   {
+    label: "Fair use",
+    free: PLAN_LIMITS.free.fairUse,
+    pro: PLAN_LIMITS.pro.fairUse,
+  },
+  {
     label: "Supported formats",
     free: SUPPORTED_IMAGE_FORMATS_SHORT,
     pro: SUPPORTED_IMAGE_FORMATS_SHORT,

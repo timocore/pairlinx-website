@@ -23,12 +23,43 @@ export const PLAN_LIMITS = {
     price: "$0",
     monthlyTransfers: "30 images/month",
     maxFileSize: "5 MB per image",
+    fairUse: "—",
   },
   pro: {
     monthlyTransfers: "Up to 15,000 images/month",
     maxFileSize: "50 MB per image",
+    fairUse: "Fair use applies",
   },
 } as const;
+
+/** Public marketing line for Pro plan cards and comparison tables. */
+export const PRO_FAIR_USE_PUBLIC = PLAN_LIMITS.pro.fairUse;
+
+/** Support and FAQ copy — no specific GB cap until usage data supports one. */
+export const PRO_FAIR_USE_DETAIL =
+  "Pro is designed for normal personal and professional workflow use. It is not unlimited storage or bulk file hosting. Fair use applies alongside the published monthly image count and per-image size limits.";
+
+/** Terms of Service — flexible protection without a published transfer cap. */
+export const PRO_FAIR_USE_TERMS_PARAGRAPH =
+  "Pro plans are intended for normal personal and professional workflow usage. We reserve the right to limit or suspend excessive usage that materially impacts service reliability, infrastructure costs, or other users.";
+
+/** Copy for Terms, Privacy, and other legal pages — keep in sync with marketing limits. */
+export const FREE_PLAN_LEGAL_LIMITS = [
+  "30 images per month",
+  "Up to 5 MB per image",
+] as const;
+
+export const PRO_PLAN_LEGAL_LIMITS = [
+  "Up to 15,000 images per month",
+  "Up to 50 MB per image",
+  "Fair use applies",
+] as const;
+
+export const FREE_PLAN_SUMMARY =
+  "The Free plan is for trying the workflow and occasional use. It includes 30 images per month and images up to 5 MB each.";
+
+export const PRO_PLAN_SUMMARY =
+  "Pro is for heavier daily image handoff: up to 15,000 images per month, images up to 50 MB each, with fair use applying to keep the service reliable.";
 
 export const SUPPORTED_IMAGE_FORMATS =
   "JPG, JPEG, PNG, WEBP, HEIC, and HEIF";
@@ -48,6 +79,7 @@ export const FREE_FEATURES_FULL = [
 export const PRO_FEATURES_FULL = [
   PLAN_LIMITS.pro.monthlyTransfers,
   "Images up to 50 MB each",
+  PRO_FAIR_USE_PUBLIC,
   "Recent image inbox on Windows",
   "Copy, preview, and open folder actions",
   "Monthly or yearly billing — cancel anytime",
@@ -65,6 +97,7 @@ export const FREE_FEATURES_COMPACT = [
 export const PRO_FEATURES_COMPACT = [
   "Images up to 50 MB each",
   PLAN_LIMITS.pro.monthlyTransfers,
+  PRO_FAIR_USE_PUBLIC,
   "Better for daily workflows",
 ];
 
@@ -79,7 +112,11 @@ export const PRICING_FAQ = [
   },
   {
     q: "What do I get with Pro?",
-    a: "Pro gives you higher monthly usage, images up to 50 MB each, and a better plan for daily image handoff workflows.",
+    a: "Pro includes up to 15,000 images per month, images up to 50 MB each, and fair use limits for heavier daily image handoff workflows.",
+  },
+  {
+    q: "What is Pro fair use?",
+    a: PRO_FAIR_USE_DETAIL,
   },
   {
     q: "What is the difference between monthly and yearly Pro?",
@@ -95,7 +132,7 @@ export const PRICING_FAQ = [
   },
   {
     q: "Is Pro unlimited?",
-    a: "No. Pro is designed for heavier daily use, but it still has fair usage limits to keep the service fast and reliable.",
+    a: "No. Pro is designed for heavier daily use, but fair use still applies alongside the published monthly image and per-file size limits.",
   },
   {
     q: "What image sizes are supported?",

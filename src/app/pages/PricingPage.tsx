@@ -19,8 +19,8 @@ export function PricingPage() {
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed">
               Inlet gives you a free way to start sending images from your iPhone browser
-              to your Windows desktop. Pro is for heavier daily use, larger images, and smoother repeat
-              workflows.
+              to your Windows desktop. Pro is for heavier daily use, larger images, and smoother
+              repeat workflows.
             </p>
           </div>
         </div>

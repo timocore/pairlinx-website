@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { ReactNode } from "react";
 import { BRAND_NAME, LEGAL_EMAIL, PRODUCT_NAME } from "../config";
+import { FREE_PLAN_LEGAL_LIMITS, PRO_FAIR_USE_TERMS_PARAGRAPH, PRO_PLAN_LEGAL_LIMITS } from "../config/pricing";
 import {
   LegalList,
   LegalPageLayout,
@@ -14,7 +15,7 @@ function LegalSubheading({ children }: { children: ReactNode }) {
 
 export function TermsPage() {
   return (
-    <LegalPageLayout title="Terms of Service" lastUpdated="June 21, 2026">
+    <LegalPageLayout title="Terms of Service" lastUpdated="June 23, 2026">
       <LegalParagraph>
         These Terms of Service (&quot;Terms&quot;) govern your use of {PRODUCT_NAME} and related
         services provided by {BRAND_NAME} (&quot;{BRAND_NAME},&quot; &quot;we,&quot; &quot;our,&quot;
@@ -69,22 +70,12 @@ export function TermsPage() {
         <LegalParagraph>Current plan limits include:</LegalParagraph>
 
         <LegalSubheading>Free Plan</LegalSubheading>
-        <LegalList
-          items={[
-            "30 images per month",
-            "Up to 5 MB per image",
-            "No credit card required",
-          ]}
-        />
+        <LegalList items={[...FREE_PLAN_LEGAL_LIMITS, "No credit card required"]} />
 
         <LegalSubheading>Pro Plan</LegalSubheading>
-        <LegalList
-          items={[
-            "Up to 15,000 images per month",
-            "Up to 50 MB per image",
-            "Subscription billing through Stripe",
-          ]}
-        />
+        <LegalList items={[...PRO_PLAN_LEGAL_LIMITS, "Subscription billing through Stripe"]} />
+
+        <LegalParagraph>{PRO_FAIR_USE_TERMS_PARAGRAPH}</LegalParagraph>
 
         <LegalParagraph>Current Pro pricing:</LegalParagraph>
         <LegalList items={["$6.99/month", "$59.99/year"]} />

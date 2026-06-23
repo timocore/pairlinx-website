@@ -11,6 +11,7 @@ import { useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import { SUPPORT_EMAIL } from "../config";
 import { INLET_DESKTOP_VERSION, INLET_PRODUCT_NAME } from "../config/inletDownload";
+import { PLAN_LIMITS, PRO_FAIR_USE_DETAIL, PRO_PLAN_SUMMARY } from "../config/pricing";
 
 type QuickHelpItem = {
   anchorId: string;
@@ -197,8 +198,7 @@ const FAQ_SECTIONS: FaqSection[] = [
       {
         id: "pairing-5",
         question: "My file is too large. What does that mean?",
-        answer:
-          "Free supports images up to 5 MB each. Pro supports images up to 50 MB each. Larger files need to be compressed or resized before sending.",
+        answer: `Free supports images up to ${PLAN_LIMITS.free.maxFileSize}. Pro supports images up to ${PLAN_LIMITS.pro.maxFileSize}. Larger files need to be compressed or resized before sending.`,
       },
       {
         id: "pairing-6",
@@ -234,7 +234,7 @@ const FAQ_SECTIONS: FaqSection[] = [
             <Link to="/pricing" className="font-medium text-blue-400 hover:text-blue-300">
               pricing page
             </Link>{" "}
-            or inside the desktop app. Pro gives you higher monthly usage and larger image uploads.
+            or inside the desktop app. {PRO_PLAN_SUMMARY}
           </>
         ),
       },
@@ -255,6 +255,11 @@ const FAQ_SECTIONS: FaqSection[] = [
         question: "Who processes payments?",
         answer:
           "Payments and subscription billing are handled securely by our payment provider.",
+      },
+      {
+        id: "billing-6",
+        question: "What is Pro fair use?",
+        answer: PRO_FAIR_USE_DETAIL,
       },
       {
         id: "billing-5",

@@ -21,7 +21,7 @@ const SEO_BY_PATH: Record<string, SeoEntry> = {
   "/pricing": {
     title: "Inlet Pricing — Free and Pro plans",
     description:
-      "Start free with 30 image transfers per month or upgrade to Pro for higher usage, larger image uploads, and daily iPhone-to-PC workflows.",
+      "Start free with 30 image transfers per month or upgrade to Pro for up to 15,000 images/month, 50 MB images, and fair use for daily iPhone-to-PC workflows.",
   },
   "/download": {
     title: "Download Inlet for Windows",

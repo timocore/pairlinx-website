@@ -79,6 +79,14 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "Fixes QR unavailable after upgrade when the cloud API rejects a stale session — Inlet now refreshes the token, clears expired auth, and prompts sign-in again",
+    ],
+  },
+  {
+    version: "0.1.30",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.30`,
+    items: [
       "Installer Cancel button works on all wizard pages, including when upgrading an existing install",
     ],
   },

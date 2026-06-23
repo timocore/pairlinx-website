@@ -79,6 +79,14 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "With Keep running in tray when closed unchecked, closing the window with X now fully quits Inlet instead of leaving background processes in Task Manager",
+    ],
+  },
+  {
+    version: "0.1.28",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.28`,
+    items: [
       "Faster single-photo receive: 5-second idle poll, 750 ms turbo poll, and immediate sync when you open or focus Inlet",
       "Open Error Log from the system tray for quicker support troubleshooting",
       "Windows release builds verify packaged server modules before packaging to prevent startup crashes",

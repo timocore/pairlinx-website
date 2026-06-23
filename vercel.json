@@ -124,6 +124,11 @@
       "source": "/download/Inlet-Setup-0.1.25.exe",
       "destination": "https://github.com/timocore/pairlinx-website/releases/download/v0.1.25/Inlet-Setup-0.1.25.exe",
       "permanent": false
+    },
+    {
+      "source": "/download/Inlet-Setup-0.1.26.exe",
+      "destination": "https://github.com/timocore/pairlinx-website/releases/download/v0.1.26/Inlet-Setup-0.1.26.exe",
+      "permanent": false
     }
   ],
   "rewrites": [

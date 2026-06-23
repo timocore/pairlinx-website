@@ -79,6 +79,17 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "Tray icon appears immediately while Inlet loads in the background",
+      "Second launch waits for startup instead of a misleading already-running message",
+      "Restart Inlet button recovers when the window does not appear",
+      "Main window opens after 12 seconds even if the page load is slow",
+    ],
+  },
+  {
+    version: "0.1.25",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.25`,
+    items: [
       "Quit & install update — one click quits Inlet and opens the installer download",
       "Clearer update steps in the app banner and Settings",
       "Installer shows Closing Inlet before setup and waits longer before continuing",

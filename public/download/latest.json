@@ -1,9 +1,9 @@
-{
-  "company": "Pairlinx",
-  "product": "Inlet",
-  "version": "0.1.24",
-  "required": false,
-  "downloadUrl": "https://pairlinx.com/download",
-  "installerUrl": "https://pairlinx.com/download/Inlet-Setup-0.1.24.exe",
-  "releaseNotesUrl": "https://pairlinx.com/support#release-notes"
-}
+{
+  "company": "Pairlinx",
+  "product": "Inlet",
+  "version": "0.1.25",
+  "required": false,
+  "downloadUrl": "https://pairlinx.com/download",
+  "installerUrl": "https://pairlinx.com/download/Inlet-Setup-0.1.25.exe",
+  "releaseNotesUrl": "https://pairlinx.com/support#release-notes"
+}

@@ -79,6 +79,18 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "Quit & install update — one click quits Inlet and opens the installer download",
+      "Clearer update steps in the app banner and Settings",
+      "Installer shows Closing Inlet before setup and waits longer before continuing",
+      "First-time tip when you close the window: Inlet keeps running in the tray for transfers",
+      "Fixes for invisible processes after startup failure and when launching Inlet twice",
+    ],
+  },
+  {
+    version: "0.1.24",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.24`,
+    items: [
       "Desktop polls every 1.5 seconds during small active uploads so images land on your PC much sooner",
       "Large batches ease to 3-second polling after 10 images, a 20+ image send, or 60 seconds of turbo sync",
       "Gallery refreshes immediately for the first 10 images, then debounces during bigger bursts",

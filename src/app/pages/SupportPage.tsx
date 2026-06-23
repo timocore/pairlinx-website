@@ -75,8 +75,19 @@ const TROUBLESHOOTING_ITEMS = [
 const RELEASE_NOTES = [
   {
     version: INLET_DESKTOP_VERSION,
-    publishedAt: "2026-06-20",
+    publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
+    items: [
+      "Desktop polls every 1.5 seconds during small active uploads so images land on your PC much sooner",
+      "Large batches ease to 3-second polling after 10 images, a 20+ image send, or 60 seconds of turbo sync",
+      "Gallery refreshes immediately for the first 10 images, then debounces during bigger bursts",
+      "One summary toast when a phone batch finishes instead of per-image desktop notifications",
+    ],
+  },
+  {
+    version: "0.1.23",
+    publishedAt: "2026-06-20",
+    title: `${INLET_PRODUCT_NAME} 0.1.23`,
     items: [
       "QR codes stay scannable for four hours; phone upload sessions stay active for four hours after you first open the link",
       "Upload time starts when you scan and open the link on your phone, not when the QR is generated on desktop",

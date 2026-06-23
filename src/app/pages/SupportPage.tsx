@@ -79,6 +79,14 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "Installer asks before closing Inlet when upgrading — tries a graceful close first, then force-closes only if needed (including when Inlet is only in the system tray)",
+    ],
+  },
+  {
+    version: "0.1.31",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.31`,
+    items: [
       "Fixes QR unavailable after upgrade when the cloud API rejects a stale session — Inlet now refreshes the token, clears expired auth, and prompts sign-in again",
     ],
   },

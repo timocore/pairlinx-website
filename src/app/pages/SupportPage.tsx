@@ -79,6 +79,14 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "In-app sidebar logo no longer shows a white rounded frame around the cyan tile",
+    ],
+  },
+  {
+    version: "0.1.35",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.35`,
+    items: [
       "App icon no longer shows white matting around the cyan tile — corners and outer edges are transparent on any background",
     ],
   },

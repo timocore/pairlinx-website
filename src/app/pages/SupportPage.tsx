@@ -76,8 +76,16 @@ const TROUBLESHOOTING_ITEMS = [
 const RELEASE_NOTES = [
   {
     version: INLET_DESKTOP_VERSION,
-    publishedAt: "2026-07-02",
+    publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
+    items: [
+      "App icon no longer shows white matting around the cyan tile — corners and outer edges are transparent on any background",
+    ],
+  },
+  {
+    version: "0.1.34",
+    publishedAt: "2026-07-02",
+    title: `${INLET_PRODUCT_NAME} 0.1.34`,
     items: [
       "New app icon across the desktop app, system tray, installer, upload page, and in-app branding",
     ],

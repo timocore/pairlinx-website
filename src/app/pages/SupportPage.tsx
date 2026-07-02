@@ -79,6 +79,14 @@ const RELEASE_NOTES = [
     publishedAt: "2026-06-23",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
     items: [
+      "Desktop, taskbar, and tray icons appear larger — the cyan tile fills Windows icon slots more fully",
+    ],
+  },
+  {
+    version: "0.1.36",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.36`,
+    items: [
       "In-app sidebar logo no longer shows a white rounded frame around the cyan tile",
     ],
   },

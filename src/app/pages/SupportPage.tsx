@@ -76,8 +76,16 @@ const TROUBLESHOOTING_ITEMS = [
 const RELEASE_NOTES = [
   {
     version: INLET_DESKTOP_VERSION,
-    publishedAt: "2026-06-23",
+    publishedAt: "2026-07-02",
     title: `${INLET_PRODUCT_NAME} ${INLET_DESKTOP_VERSION}`,
+    items: [
+      "New app icon across the desktop app, system tray, installer, upload page, and in-app branding",
+    ],
+  },
+  {
+    version: "0.1.33",
+    publishedAt: "2026-06-23",
+    title: `${INLET_PRODUCT_NAME} 0.1.33`,
     items: [
       "Installer now fully quits Inlet from the tray after you approve closing it during upgrade (graceful close no longer only hides the window)",
     ],

@@ -26,7 +26,7 @@ export function HeroProductPlaceholder() {
             <div className="overflow-hidden rounded-[4px] border border-slate-200/30 bg-white shadow-2xl shadow-black/50 ring-1 ring-white/20">
               <img
                 src={PRODUCT_HERO_PC}
-                alt="Inlet desktop app — recent transfers grid on Windows"
+                alt="Inlet desktop app — recent images grid on Windows"
                 className="block w-full h-auto"
                 loading="eager"
                 decoding="async"

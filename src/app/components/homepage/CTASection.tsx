@@ -20,14 +20,14 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-sm font-semibold tracking-wide uppercase text-blue-200/90 mb-4">
-            Get started
+            Stay in your flow
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
-            Start with {PRODUCT_NAME}.
+            Remove one more interruption.
           </h2>
           <p className="text-lg text-blue-100/80 mb-6 max-w-2xl mx-auto leading-relaxed">
-            Download for Windows, sign in once, and send images from your iPhone browser to your
-            desktop inbox.
+            Download {PRODUCT_NAME} for Windows, sign in once, and move screenshots and photos from
+            your iPhone to your desktop without breaking focus.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -37,7 +37,7 @@ export function CTASection() {
                 className="bg-white text-blue-700 px-10 py-4 rounded-xl inline-flex items-center gap-3 font-semibold text-lg shadow-xl shadow-black/20 ring-1 ring-white/20 hover:bg-blue-50 transition-colors"
               >
                 <Download className="size-5" />
-                Download for Windows
+                Try {PRODUCT_NAME}
               </Link>
             </motion.div>
 
@@ -46,7 +46,7 @@ export function CTASection() {
                 to="/products/inlet"
                 className="text-white/95 px-10 py-4 rounded-xl inline-flex items-center gap-3 font-semibold text-lg border border-white/25 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/40 transition-colors"
               >
-                View product
+                See how it works
                 <ArrowRight className="size-5" />
               </Link>
             </motion.div>

@@ -4,24 +4,24 @@ import { motion } from "motion/react";
 const frictionCards = [
   {
     icon: Mail,
-    title: "Emailing yourself screenshots",
-    description: "Attachments, threads, and delays every time you need one image on your PC.",
+    title: "One screenshot",
+    description: "You capture it on your phone, then lose momentum emailing it to yourself.",
     accentBorder: "border-red-500/20",
     accentBg: "bg-red-500/[0.05]",
     iconWrap: "bg-red-500/10 text-red-400",
   },
   {
     icon: FolderSync,
-    title: "Digging through sync folders",
-    description: "Hunting the right file in iCloud or shared folders breaks your flow.",
+    title: "One receipt",
+    description: "It lives on the wrong device while your real work waits on your desktop.",
     accentBorder: "border-amber-500/20",
     accentBg: "bg-amber-500/[0.05]",
     iconWrap: "bg-amber-500/10 text-amber-400",
   },
   {
     icon: Workflow,
-    title: "Interrupting your workflow",
-    description: "Cables, imports, and workarounds pull you out of what you were doing.",
+    title: "One small detour",
+    description: "QR codes, sync folders, and workarounds pull you out of what you were doing.",
     accentBorder: "border-purple-500/20",
     accentBg: "bg-purple-500/[0.05]",
     iconWrap: "bg-purple-500/10 text-purple-400",
@@ -40,10 +40,11 @@ export function ProblemTeaserSection() {
           className="mx-auto max-w-2xl text-center mb-10"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
-            Phone captures. Desktop work. The gap shouldn&apos;t slow you down.
+            Every great workflow has one enemy: tiny interruptions.
           </h2>
           <p className="text-gray-400 leading-relaxed">
-            Everyday visual handoff is still harder than it should be.
+            Not big problems. Just one picture, one screenshot, one receipt, one moment stuck on the
+            wrong device.
           </p>
         </motion.div>
 

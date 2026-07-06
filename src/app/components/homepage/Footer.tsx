@@ -14,7 +14,10 @@ export function Footer() {
               <span className="font-semibold text-xl">{BRAND_NAME}</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Simple utilities for faster phone-to-computer workflows.
+              Pairlinx removes the tiny interruptions that break your flow.{" "}
+              <Link to="/why" className="text-blue-400 hover:text-blue-300">
+                Why Pairlinx exists
+              </Link>
             </p>
           </div>
 

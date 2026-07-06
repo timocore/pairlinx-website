@@ -25,7 +25,10 @@ export function Footer() {
           <div className="col-span-2 lg:col-span-1">
             <Logo />
             <p className="mt-4 max-w-xs text-[15px] leading-relaxed text-gray-300">
-              Simple utilities for faster phone-to-computer workflows.
+              Pairlinx removes the tiny interruptions that break your flow.{" "}
+              <Link to="/why" className="text-blue-400 hover:text-blue-300">
+                Why Pairlinx exists
+              </Link>
             </p>
             {activeSocialLinks.length > 0 ? (
               <ul className="mt-5 flex items-center gap-2.5">
@@ -73,6 +76,11 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-sm font-semibold text-gray-100">Legal & support</h3>
             <ul className="space-y-3">
+              <li>
+                <Link to="/why" className={footerLinkClass}>
+                  Why Pairlinx
+                </Link>
+              </li>
               <li>
                 <Link to="/support" className={footerLinkClass}>
                   Support

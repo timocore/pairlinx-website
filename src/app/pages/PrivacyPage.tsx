@@ -40,7 +40,8 @@ export function PrivacyPage() {
 
       <LegalSection title={`1. What ${PRODUCT_NAME} Does`}>
         <LegalParagraph>
-          {PRODUCT_NAME} is a phone-to-PC image transfer utility.
+          {PRODUCT_NAME} is a focused image handoff tool for sending images from your iPhone browser
+          to your paired Windows PC.
         </LegalParagraph>
         <LegalParagraph>The service allows you to:</LegalParagraph>
         <LegalList
@@ -60,7 +61,7 @@ export function PrivacyPage() {
           {PRODUCT_NAME} folder.
         </LegalParagraph>
         <LegalParagraph>
-          {PRODUCT_NAME} is designed for temporary image transfer and workflow convenience. It is
+          {PRODUCT_NAME} is designed for temporary image delivery and workflow convenience. It is
           not marketed or intended as permanent cloud storage, backup storage, or long-term archival
           storage.
         </LegalParagraph>

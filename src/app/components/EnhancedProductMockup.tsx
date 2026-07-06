@@ -17,7 +17,7 @@ export function EnhancedProductMockup() {
       <div className="relative rounded-[4px] bg-white shadow-2xl shadow-blue-950/20 border border-slate-200/90 overflow-hidden ring-1 ring-slate-200/80">
         <img
           src={PRODUCT_HERO_PC}
-          alt="Inlet desktop app — recent transfers grid on Windows"
+          alt="Inlet desktop app — recent images grid on Windows"
           className="block w-full h-auto"
           loading="eager"
           decoding="async"

@@ -11,6 +11,7 @@ import { ContactPage } from "./pages/ContactPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
 import { RefundPolicyPage } from "./pages/RefundPolicyPage";
+import { WhyPairlinxPage } from "./pages/WhyPairlinxPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { NewsletterConfirmedPage } from "./pages/NewsletterConfirmedPage";
 import { NewsletterUnsubscribedPage } from "./pages/NewsletterUnsubscribedPage";
@@ -32,6 +33,7 @@ export const router = createBrowserRouter([
       { path: "changelog", element: <Navigate to="/releases" replace /> },
       { path: "support", element: <SupportPage /> },
       { path: "contact", element: <ContactPage /> },
+      { path: "why", element: <WhyPairlinxPage /> },
       { path: "privacy", element: <PrivacyPage /> },
       { path: "terms", element: <TermsPage /> },
       { path: "refund-policy", element: <RefundPolicyPage /> },

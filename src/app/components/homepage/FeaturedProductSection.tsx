@@ -32,7 +32,7 @@ export function FeaturedProductSection() {
             Featured product
           </div>
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Start with our flagship utility.
+            The first way to stay in your flow.
           </h2>
         </motion.div>
 
@@ -51,12 +51,13 @@ export function FeaturedProductSection() {
 
               <h3 className="mb-4 text-4xl font-bold text-white">{PRODUCT_NAME}</h3>
               <p className="mb-6 text-xl leading-relaxed text-gray-300">
-                An instant visual capture inbox for iPhone-to-PC workflows.
+                Move screenshots, photos, and images from your phone to your computer — instantly.
               </p>
               <p className="mb-8 text-sm leading-relaxed text-gray-400">
-                Send image files from your iPhone browser to your Windows PC. Images are
-                temporarily processed through Pairlinx Cloud and saved locally on your desktop.
-                Image-only: JPG, JPEG, PNG, WEBP, HEIC, and HEIF.
+                {PRODUCT_NAME} is the first Pairlinx product. It helps you move visual work from
+                your iPhone to your Windows PC — not because moving files is exciting, but because
+                staying in flow is. Images are processed through Pairlinx Cloud and saved locally on
+                your desktop. JPG, JPEG, PNG, WEBP, HEIC, and HEIF.
               </p>
 
               <ul className="mb-8 space-y-2.5">
@@ -73,7 +74,7 @@ export function FeaturedProductSection() {
                   to="/products/inlet"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02] hover:from-blue-700 hover:to-purple-700"
                 >
-                  View product
+                  See how it works
                   <ArrowRight className="size-5" />
                 </Link>
                 <Link
@@ -81,7 +82,7 @@ export function FeaturedProductSection() {
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-600 bg-gray-800/80 px-8 py-3.5 font-semibold text-white transition-all hover:bg-gray-700/80"
                 >
                   <Download className="size-5" />
-                  Download for Windows
+                  Try {PRODUCT_NAME}
                 </Link>
               </div>
             </div>

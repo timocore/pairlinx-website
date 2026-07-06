@@ -25,7 +25,7 @@ export function FeaturedProductPreview({ embedded = false }: FeaturedProductPrev
         <div className="overflow-hidden rounded-[2px] border border-slate-200/30 bg-white shadow-xl shadow-black/45 ring-1 ring-white/15">
           <img
             src={PRODUCT_HERO_PC}
-            alt="Inlet Windows inbox with recent image transfers"
+            alt="Inlet Windows inbox with recent images"
             className="block w-full h-auto"
             loading="lazy"
             decoding="async"
@@ -52,7 +52,7 @@ export function FeaturedProductPreview({ embedded = false }: FeaturedProductPrev
       </div>
 
       <p className="mt-4 text-center text-xs leading-relaxed text-gray-500">
-        iPhone browser → Pairlinx Cloud → saved locally on Windows
+        iPhone → Pairlinx Cloud → on your Windows desktop
       </p>
     </div>
   );

@@ -13,11 +13,11 @@ export function FutureUtilitiesSection() {
           transition={{ duration: 0.5 }}
           className="rounded-2xl border border-dashed border-gray-600/55 bg-gray-800/35 px-7 py-9 sm:px-9 sm:py-10 ring-1 ring-white/[0.03]"
         >
-          <h2 className="text-xl font-semibold text-gray-200 mb-3">Coming later</h2>
+          <h2 className="text-xl font-semibold text-gray-200 mb-3">More ways to stay in flow</h2>
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            We&apos;re planning more focused utilities for the moments where phone work and desktop
-            work do not connect cleanly. Nothing here is launched yet — we&apos;re building one
-            useful tool at a time.
+            We&apos;re building more focused tools for the small moments where phone work and
+            desktop work don&apos;t connect cleanly. Nothing here is launched yet — one interruption
+            removed at a time.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
             {futureTags.map((tag) => (

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Download, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 import { BRAND_NAME, PRODUCT_NAME } from "../../config";
 import { HeroProductPlaceholder } from "./HeroProductPlaceholder";
@@ -32,33 +32,38 @@ export function HeroSection() {
           </div>
 
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
-              Simple utilities that make your phone and computer work better together.
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+              Remove the tiny interruptions that break your flow.
             </h1>
 
+            <p className="text-base sm:text-lg text-gray-200 font-medium mb-5 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              {BRAND_NAME} builds tools that connect your phone and your computer.
+            </p>
+
             <p className="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              {BRAND_NAME} builds focused cross-device tools that remove friction from everyday
-              phone-to-computer workflows.
+              Every day, small cross-device tasks pull you away from your work — one screenshot, one
+              receipt, one photo, one QR code at a time. {BRAND_NAME} removes those interruptions so
+              you can keep moving.
             </p>
 
             <p className="text-sm text-gray-400 mb-6">
-              <span className="text-blue-300 font-medium">{PRODUCT_NAME}</span> is our first product.
+              <span className="text-blue-300 font-medium">{PRODUCT_NAME}</span> is the first{" "}
+              {BRAND_NAME} product.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
               <Link
-                to="/products/inlet"
+                to="/download"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl inline-flex items-center justify-center gap-3 transition-all shadow-xl shadow-blue-600/40 hover:shadow-2xl hover:shadow-purple-600/50 hover:scale-[1.02] w-full sm:w-auto"
               >
-                Explore {PRODUCT_NAME}
+                Try {PRODUCT_NAME}
                 <ArrowRight className="size-5" />
               </Link>
               <Link
-                to="/download"
+                to="/products/inlet"
                 className="bg-gray-800/80 hover:bg-gray-700/80 text-white px-8 py-4 rounded-xl inline-flex items-center justify-center gap-3 transition-all border border-gray-600 shadow-lg hover:shadow-xl backdrop-blur-sm w-full sm:w-auto"
               >
-                <Download className="size-5" />
-                Download for Windows
+                See how it works
               </Link>
             </div>
           </div>

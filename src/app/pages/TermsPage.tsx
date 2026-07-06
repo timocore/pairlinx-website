@@ -25,7 +25,10 @@ export function TermsPage() {
       <LegalParagraph>If you do not agree, do not use the service.</LegalParagraph>
 
       <LegalSection title="1. The Service">
-        <LegalParagraph>{PRODUCT_NAME} is a phone-to-PC image transfer utility.</LegalParagraph>
+        <LegalParagraph>
+          {PRODUCT_NAME} is a focused image handoff tool for sending images from your iPhone browser
+          to your paired Windows PC.
+        </LegalParagraph>
         <LegalParagraph>The service allows users to:</LegalParagraph>
         <LegalList
           items={[
@@ -41,7 +44,7 @@ export function TermsPage() {
         </LegalParagraph>
         <LegalParagraph>{PRODUCT_NAME} supports image uploads only.</LegalParagraph>
         <LegalParagraph>
-          {PRODUCT_NAME} is intended for temporary transfer and workflow convenience. It is not
+          {PRODUCT_NAME} is intended for temporary delivery and workflow convenience. It is not
           marketed or intended as permanent cloud storage, archival storage, or backup storage.
         </LegalParagraph>
         <LegalParagraph>

@@ -1,26 +1,27 @@
+import { Link } from "react-router";
 import { Target, Smartphone, Zap } from "lucide-react";
 import { motion } from "motion/react";
 
 const principles = [
   {
     icon: Target,
-    title: "One job per app",
+    title: "Tiny interruptions, not big problems",
     description:
-      "Each utility is focused on one workflow instead of trying to replace everything on your devices.",
+      "Pairlinx exists to remove the small cross-device moments that pull you out of focus.",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     icon: Smartphone,
-    title: "Cross-device first",
+    title: "Your phone and computer, together",
     description:
-      "Built for the moments when something starts on your phone but the real work happens on your computer.",
+      "Built for when something starts on your phone but the real work happens on your desktop.",
     gradient: "from-purple-500 to-pink-500",
   },
   {
     icon: Zap,
-    title: "Built around the last mile",
+    title: "Less interruption. More momentum.",
     description:
-      "Less hunting, fewer steps, and fewer interruptions between capturing something and using it.",
+      "Fewer steps between capturing something and using it — so you can stay on what matters.",
     gradient: "from-amber-500 to-orange-500",
   },
 ];
@@ -37,13 +38,22 @@ export function PlatformPrinciplesSection() {
           className="mx-auto max-w-2xl text-center mb-10"
         >
           <div className="inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium mb-4 border border-purple-500/30">
-            How we build
+            Why Pairlinx
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
-            Platform principles
+            Stay focused on the work that matters.
           </h2>
           <p className="text-base text-gray-300 font-medium leading-relaxed">
-            A consistent approach across every utility we ship.
+            Pairlinx removes the tiny interruptions that break your flow — one focused product at a
+            time.
+          </p>
+          <p className="mt-4">
+            <Link
+              to="/why"
+              className="text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
+            >
+              Why Pairlinx exists →
+            </Link>
           </p>
         </motion.div>
 

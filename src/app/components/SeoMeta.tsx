@@ -9,19 +9,19 @@ type SeoEntry = {
 
 const SEO_BY_PATH: Record<string, SeoEntry> = {
   "/": {
-    title: "Pairlinx — Simple utilities for phone and computer workflows",
+    title: "Pairlinx — Remove the tiny interruptions that break your flow",
     description:
-      "Pairlinx builds focused cross-device utilities that make phone-to-computer workflows faster. Start with Inlet for iPhone-to-PC image handoff.",
+      "Pairlinx helps you stay in flow by removing small cross-device interruptions between your phone and computer. Start with Inlet for instant iPhone-to-PC image handoff.",
   },
   "/products/inlet": {
     title: "Inlet — Send images from iPhone to PC in seconds",
     description:
-      "Inlet is an instant visual capture inbox for iPhone-to-Windows workflows. Send screenshots, photos, and visual references from your phone browser to your PC.",
+      "Inlet removes a common interruption — moving screenshots, photos, and visual references from your iPhone to your Windows desktop without breaking focus.",
   },
   "/pricing": {
     title: "Inlet Pricing — Free and Pro plans",
     description:
-      "Start free with 30 image transfers per month or upgrade to Pro for up to 15,000 images/month, 50 MB images, and fair use for daily iPhone-to-PC workflows.",
+      "Start free with 30 images per month or upgrade to Pro for up to 15,000 images/month, 50 MB images, and fair use for daily image handoff.",
   },
   "/download": {
     title: "Download Inlet for Windows",
@@ -42,6 +42,11 @@ const SEO_BY_PATH: Record<string, SeoEntry> = {
     title: "Contact Pairlinx",
     description:
       "Contact Pairlinx for Inlet support, billing questions, privacy requests, partnerships, and general questions.",
+  },
+  "/why": {
+    title: "Why Pairlinx exists",
+    description:
+      "Pairlinx removes the tiny interruptions that break your flow. Learn why we build tools that connect your phone and computer — starting with Inlet.",
   },
   "/privacy": {
     title: "Privacy Policy — Pairlinx",

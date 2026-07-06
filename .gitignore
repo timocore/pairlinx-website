@@ -17,3 +17,7 @@ pnpm-debug.log*
 Thumbs.db
 
 .vercel
+
+# Installers are hosted via GitHub Releases, not git (see docs/INLET_RELEASES.md).
+public/download/*.exe
+releases/*.exe
